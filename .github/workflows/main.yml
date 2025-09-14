@@ -37,3 +37,4 @@ jobs:
 <%- end -%>
       - name: Run the default task
         run: bundle exec rake
+
