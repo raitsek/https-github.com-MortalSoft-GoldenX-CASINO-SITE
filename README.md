@@ -1,262 +1,62 @@
-Welcome to the OpenSSL Project
-==============================
-
-[![openssl logo]][www.openssl.org]
+# CheckMyHTTPS
 
-[![github actions ci badge]][github actions ci]
-[![Nightly OS Zoo ci badge](https://github.com/openssl/openssl/actions/workflows/os-zoo.yml/badge.svg)](https://github.com/openssl/openssl/actions/workflows/os-zoo.yml)
-[![Provider Compatibility](https://github.com/openssl/openssl/actions/workflows/provider-compatibility.yml/badge.svg)](https://github.com/openssl/openssl/actions/workflows/provider-compatibility.yml)
-[![Quic Interop](https://github.com/openssl/openssl/actions/workflows/run_quic_interop.yml/badge.svg)](https://github.com/openssl/openssl/actions/workflows/run_quic_interop.yml)
-[![Daily checks](https://github.com/openssl/openssl/actions/workflows/run-checker-daily.yml/badge.svg)](https://github.com/openssl/openssl/actions/workflows/run-checker-daily.yml)
+CheckMyHTTPS is a method allowing the verification (check) that your secured web connections ('HTTPS' protocols) are not intercepted (neither decrypted, nor listened, nor modified). We have created several simple tools that use this method (WEB browser add-ons, smartphone apps, etc.).
 
-OpenSSL is a robust, commercial-grade, full-featured Open Source Toolkit
-for the TLS (formerly SSL), DTLS and QUIC protocols.
-
-The protocol implementations are based on a full-strength general purpose
-cryptographic library, which can also be used stand-alone. Also included is a
-cryptographic module validated to conform with FIPS standards.
-
-OpenSSL is descended from the SSLeay library developed by Eric A. Young
-and Tim J. Hudson.
-
-The official Home Page of the OpenSSL Project is [www.openssl.org].
-
-Table of Contents
-=================
-
- - [Overview](#overview)
- - [Download](#download)
- - [Build and Install](#build-and-install)
- - [Documentation](#documentation)
- - [License](#license)
- - [Support](#support)
- - [Contributing](#contributing)
- - [Legalities](#legalities)
+# How it works?
 
-Overview
-========
-
-The OpenSSL toolkit includes:
+If you have any doubt (or when you want), you are free to check your HTTPS connection by clicking on the CheckMyHTTPS icon (a gray padlock). At that time, the check of your HTTPS connection is performed. The gray padlock can turn to the following colors:
+- Green: the HTTPS connection isn't intercepted;
+- Red: the HTTPS connection is intercepted;
+- Blue: the verification is impossible (check server unreachable, website in whitelist);
+- Gray: the verification is in progress.
 
-- **libssl**
-  an implementation of all TLS protocol versions up to TLSv1.3 ([RFC 8446]),
-  DTLS protocol versions up to DTLSv1.2 ([RFC 6347]) and
-  the QUIC version 1 protocol ([RFC 9000]).
+# Respect for privacy:
 
-- **libcrypto**
-  a full-strength general purpose cryptographic library. It constitutes the
-  basis of the TLS implementation, but can also be used independently.
+- The extension is only active when you click on its icon. At that moment, it only uses the name of the visited website and the certificate received from it;
+- The "verification server" only receives the name of the visited website
+- You can create your own "verification server"
 
-- **openssl**
-  the OpenSSL command line tool, a swiss army knife for cryptographic tasks,
-  testing and analyzing. It can be used for
-  - creation of key parameters
-  - creation of X.509 certificates, CSRs and CRLs
-  - calculation of message digests
-  - encryption and decryption
-  - SSL/TLS/DTLS and client and server tests
-  - QUIC client tests
-  - handling of S/MIME signed or encrypted mail
-  - and more...
+# More details:
 
-Download
-========
+A secure website (HTTPS) justifies its identity with your browser by sending a certificate validated by a recognized certification authority. Interception techniques, to be able to work, dynamically forge false certificates (a bit like a fake identity card).
+The method we propose to you, verifies that the certificate you receive is the one issued by the server. 
 
-For Production Use
-------------------
+________________________________________________________________________________
 
-Source code tarballs of the official releases can be downloaded from
-[openssl-library.org/source/](https://openssl-library.org/source/).
-The OpenSSL project does not distribute the toolkit in binary form.
+# CheckMyHTTPS
 
-However, for a large variety of operating systems precompiled versions
-of the OpenSSL toolkit are available. In particular, on Linux and other
-Unix operating systems, it is normally recommended to link against the
-precompiled shared libraries provided by the distributor or vendor.
+CheckMyHTTPS est une méthode permettant de vérifier (check) que vos connexions WEB sécurisées (protocoles HTTPS) ne sont pas interceptées (ni déchiffrées, ni écoutées, ni modifiées). Nous avons développé plusieurs outils simples qui exploitent cette méthode (modules additionnels pour navigateurs WEB, application pour mobiles, etc.).
 
-We also maintain a list of third parties that produce OpenSSL binaries for
-various Operating Systems (including Windows) on the [Binaries] page on our
-wiki.
+# Comment cette extension fonctionne-t-elle ?
 
-For Testing and Development
----------------------------
+Si vous avez un doute (ou quand vous le souhaitez), vous êtes libre de vérifier votre connexion HTTPS en cliquant sur l'icône de l'extension CheckMyHTTPS (un cadenas gris). À ce moment-là, le contrôle de votre connexion HTTPS est effectué. Le cadenas gris peut prendre les couleurs suivantes :
+- Vert : la connexion HTTPS n'est pas interceptée;
+- Rouge : la connexion HTTPS est interceptée;
+- Bleu : la vérification est impossible (le serveur de vérification est injoignable, le site à vérifier est en liste blanche);
+- Gris : la vérification est en cours.
 
-Although testing and development could in theory also be done using
-the source tarballs, having a local copy of the git repository with
-the entire project history gives you much more insight into the
-code base.
+# Respect de la vie privée :
 
-The main OpenSSL Git repository is private.
-There is a public GitHub mirror of it at [github.com/openssl/openssl],
-which is updated automatically from the former on every commit.
+- L’extension n'est active que lorsque vous cliquez sur son icône. À ce moment là, elle n'utilise que le nom du site visité et le certificat reçu de ce dernier;
+- Le "serveur de vérification" externe ne reçoit que le nom du site visité;
+- Vous pouvez créer votre propre "serveur de vérification".
 
-A local copy of the Git repository can be obtained by cloning it from
-the GitHub mirror using
+# Plus de détails :
 
-    git clone https://github.com/openssl/openssl.git
+Un site web sécurisé (HTTPS) justifie son identité auprès de votre navigateur par l’envoi d’un certificat de sécurité validé par une autorité de certification reconnue. Les techniques d'interception, pour fonctionner, génèrent dynamiquement de faux certificats (un peu comme une fausse carte d'identité). La méthode que nous vous proposons vérifie que le certificat que vous recevez est bien celui qui a été émis par le serveur.
 
-If you intend to contribute to OpenSSL, either to fix bugs or contribute
-new features, you need to fork the GitHub mirror and clone your public fork
-instead.
+________________________________________________________________________________
 
-    git clone https://github.com/yourname/openssl.git
+# Authors
 
-This is necessary because all development of OpenSSL nowadays is done via
-GitHub pull requests. For more details, see [Contributing](#contributing).
+Original idea & project management: Richard REY (aka Rexy)
 
-Build and Install
-=================
+Current developers : Sylvain BOUTEILLER, Adrien SCHNEIDER, Cyril LEBLAY
 
-After obtaining the Source, have a look at the [INSTALL](INSTALL.md) file for
-detailed instructions about building and installing OpenSSL. For some
-platforms, the installation instructions are amended by a platform specific
-document.
+Previous developers : Raphaël PION, Hugo MEZIANI, Tom HOUDAYER, Catarina DE FARIA, Quentin COLLART, Mathis CADIO, Ghassen LAHDHIRI, Ahmed BOUSRIH, Mehdi BELAJOUZA 
 
- * [Notes for UNIX-like platforms](NOTES-UNIX.md)
- * [Notes for Android platforms](NOTES-ANDROID.md)
- * [Notes for Windows platforms](NOTES-WINDOWS.md)
- * [Notes for the DOS platform with DJGPP](NOTES-DJGPP.md)
- * [Notes for the OpenVMS platform](NOTES-VMS.md)
- * [Notes on Perl](NOTES-PERL.md)
- * [Notes on Valgrind](NOTES-VALGRIND.md)
+Logo: Clément SICCARDI
 
-Specific notes on upgrading to OpenSSL 3.x from previous versions can be found
-in the [ossl-guide-migration(7ossl)] manual page.
+# LICENSE
 
-Documentation
-=============
-
-README Files
-------------
-
-There are some README.md files in the top level of the source distribution
-containing additional information on specific topics.
-
- * [Information about the OpenSSL QUIC protocol implementation](README-QUIC.md)
- * [Information about the OpenSSL Provider architecture](README-PROVIDERS.md)
- * [Information about using the OpenSSL FIPS validated module](README-FIPS.md)
- * [Information about the legacy OpenSSL Engine architecture](README-ENGINES.md)
-
-The OpenSSL Guide
------------------
-
-There are some tutorial and introductory pages on some important OpenSSL topics
-within the [OpenSSL Guide].
-
-Manual Pages
-------------
-
-The manual pages for the master branch and all current stable releases are
-available online.
-
-- [OpenSSL master](https://docs.openssl.org/master/)
-- [OpenSSL 3.5](https://docs.openssl.org/3.5/)
-- [OpenSSL 3.4](https://docs.openssl.org/3.4/)
-- [OpenSSL 3.3](https://docs.openssl.org/3.3/)
-- [OpenSSL 3.2](https://docs.openssl.org/3.2/)
-- [OpenSSL 3.0](https://docs.openssl.org/3.0/)
-
-Demos
------
-
-There are numerous source code demos for using various OpenSSL capabilities in the
-[demos subfolder](./demos).
-
-Wiki
-----
-
-There is a [GitHub Wiki] which is currently not very active.
-
-License
-=======
-
-OpenSSL is licensed under the Apache License 2.0, which means that
-you are free to get and use it for commercial and non-commercial
-purposes as long as you fulfill its conditions.
-
-See the [LICENSE.txt](LICENSE.txt) file for more details.
-
-Support
-=======
-
-There are various ways to get in touch. The correct channel depends on
-your requirement. See the [SUPPORT](SUPPORT.md) file for more details.
-
-Contributing
-============
-
-If you are interested and willing to contribute to the OpenSSL project,
-please take a look at the [CONTRIBUTING](CONTRIBUTING.md) file.
-
-Legalities
-==========
-
-A number of nations restrict the use or export of cryptography. If you are
-potentially subject to such restrictions, you should seek legal advice before
-attempting to develop or distribute cryptographic code.
-
-Copyright
-=========
-
-Copyright (c) 1998-2025 The OpenSSL Project Authors
-
-Copyright (c) 1995-1998 Eric A. Young, Tim J. Hudson
-
-All rights reserved.
-
-<!-- Links  -->
-
-[www.openssl.org]:
-    <https://www.openssl.org>
-    "OpenSSL Homepage"
-
-[github.com/openssl/openssl]:
-    <https://github.com/openssl/openssl>
-    "OpenSSL GitHub Mirror"
-
-[GitHub Wiki]:
-    <https://github.com/openssl/openssl/wiki>
-    "OpenSSL Wiki"
-
-[ossl-guide-migration(7ossl)]:
-    <https://docs.openssl.org/master/man7/ossl-guide-migration>
-    "OpenSSL Migration Guide"
-
-[RFC 8446]:
-     <https://tools.ietf.org/html/rfc8446>
-
-[RFC 6347]:
-     <https://tools.ietf.org/html/rfc6347>
-
-[RFC 9000]:
-     <https://tools.ietf.org/html/rfc9000>
-
-[Binaries]:
-    <https://github.com/openssl/openssl/wiki/Binaries>
-    "List of third party OpenSSL binaries"
-
-[OpenSSL Guide]:
-    <https://docs.openssl.org/master/man7/ossl-guide-introduction>
-    "An introduction to OpenSSL"
-
-<!-- Logos and Badges -->
-
-[openssl logo]:
-    doc/images/openssl.svg
-    "OpenSSL Logo"
-
-[github actions ci badge]:
-    <https://github.com/openssl/openssl/workflows/GitHub%20CI/badge.svg>
-    "GitHub Actions CI Status"
-
-[github actions ci]:
-    <https://github.com/openssl/openssl/actions/workflows/ci.yml>
-    "GitHub Actions CI"
-
-[appveyor badge]:
-    <https://ci.appveyor.com/api/projects/status/8e10o7xfrg73v98f/branch/master?svg=true>
-    "AppVeyor Build Status"
-
-[appveyor jobs]:
-    <https://ci.appveyor.com/project/openssl/openssl/branch/master>
-    "AppVeyor Jobs"
+GPL v3
