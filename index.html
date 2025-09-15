@@ -1,0 +1,1100 @@
+<html lang="en-US" class="dark"><head><style>.ͼ1.cm-focused {outline: 1px dotted #212121;}
+.ͼ1 {position: relative !important; box-sizing: border-box; display: flex !important; flex-direction: column;}
+.ͼ1 .cm-scroller {display: flex !important; align-items: flex-start !important; font-family: monospace; line-height: 1.4; height: 100%; overflow-x: auto; position: relative; z-index: 0; overflow-anchor: none;}
+.ͼ1 .cm-content[contenteditable=true] {-webkit-user-modify: read-write-plaintext-only;}
+.ͼ1 .cm-content {margin: 0; flex-grow: 2; flex-shrink: 0; display: block; white-space: pre; word-wrap: normal; box-sizing: border-box; min-height: 100%; padding: 4px 0; outline: none;}
+.ͼ1 .cm-lineWrapping {white-space: pre-wrap; white-space: break-spaces; word-break: break-word; overflow-wrap: anywhere; flex-shrink: 1;}
+.ͼ2 .cm-content {caret-color: black;}
+.ͼ3 .cm-content {caret-color: white;}
+.ͼ1 .cm-line {display: block; padding: 0 2px 0 6px;}
+.ͼ1 .cm-layer > * {position: absolute;}
+.ͼ1 .cm-layer {position: absolute; left: 0; top: 0; contain: size style;}
+.ͼ2 .cm-selectionBackground {background: #d9d9d9;}
+.ͼ3 .cm-selectionBackground {background: #222;}
+.ͼ2.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground {background: #d7d4f0;}
+.ͼ3.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground {background: #233;}
+.ͼ1 .cm-cursorLayer {pointer-events: none;}
+.ͼ1.cm-focused > .cm-scroller > .cm-cursorLayer {animation: steps(1) cm-blink 1.2s infinite;}
+@keyframes cm-blink {50% {opacity: 0;}}
+@keyframes cm-blink2 {50% {opacity: 0;}}
+.ͼ1 .cm-cursor, .ͼ1 .cm-dropCursor {border-left: 1.2px solid black; margin-left: -0.6px; pointer-events: none;}
+.ͼ1 .cm-cursor {display: none;}
+.ͼ3 .cm-cursor {border-left-color: #ddd;}
+.ͼ1 .cm-dropCursor {position: absolute;}
+.ͼ1.cm-focused > .cm-scroller > .cm-cursorLayer .cm-cursor {display: block;}
+.ͼ1 .cm-iso {unicode-bidi: isolate;}
+.ͼ1 .cm-announced {position: fixed; top: -10000px;}
+@media print {.ͼ1 .cm-announced {display: none;}}
+.ͼ2 .cm-activeLine {background-color: #cceeff44;}
+.ͼ3 .cm-activeLine {background-color: #99eeff33;}
+.ͼ2 .cm-specialChar {color: red;}
+.ͼ3 .cm-specialChar {color: #f78;}
+.ͼ1 .cm-gutters {flex-shrink: 0; display: flex; height: 100%; box-sizing: border-box; inset-inline-start: 0; z-index: 200;}
+.ͼ2 .cm-gutters {background-color: #f5f5f5; color: #6c6c6c; border-right: 1px solid #ddd;}
+.ͼ3 .cm-gutters {background-color: #333338; color: #ccc;}
+.ͼ1 .cm-gutter {display: flex !important; flex-direction: column; flex-shrink: 0; box-sizing: border-box; min-height: 100%; overflow: hidden;}
+.ͼ1 .cm-gutterElement {box-sizing: border-box;}
+.ͼ1 .cm-lineNumbers .cm-gutterElement {padding: 0 3px 0 5px; min-width: 20px; text-align: right; white-space: nowrap;}
+.ͼ2 .cm-activeLineGutter {background-color: #e2f2ff;}
+.ͼ3 .cm-activeLineGutter {background-color: #222227;}
+.ͼ1 .cm-panels {box-sizing: border-box; position: sticky; left: 0; right: 0; z-index: 300;}
+.ͼ2 .cm-panels {background-color: #f5f5f5; color: black;}
+.ͼ2 .cm-panels-top {border-bottom: 1px solid #ddd;}
+.ͼ2 .cm-panels-bottom {border-top: 1px solid #ddd;}
+.ͼ3 .cm-panels {background-color: #333338; color: white;}
+.ͼ1 .cm-tab {display: inline-block; overflow: hidden; vertical-align: bottom;}
+.ͼ1 .cm-widgetBuffer {vertical-align: text-top; height: 1em; width: 0; display: inline;}
+.ͼ1 .cm-placeholder {color: #888; display: inline-block; vertical-align: top;}
+.ͼ1 .cm-highlightSpace {background-image: radial-gradient(circle at 50% 55%, #aaa 20%, transparent 5%); background-position: center;}
+.ͼ1 .cm-highlightTab {background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="20"><path stroke="%23888" stroke-width="1" fill="none" d="M1 10H196L190 5M190 15L196 10M197 4L197 16"/></svg>'); background-size: auto 100%; background-position: right 90%; background-repeat: no-repeat;}
+.ͼ1 .cm-trailingSpace {background-color: #ff332255;}
+.ͼ1 .cm-button {vertical-align: middle; color: inherit; font-size: 70%; padding: .2em 1em; border-radius: 1px;}
+.ͼ2 .cm-button:active {background-image: linear-gradient(#b4b4b4, #d0d3d6);}
+.ͼ2 .cm-button {background-image: linear-gradient(#eff1f5, #d9d9df); border: 1px solid #888;}
+.ͼ3 .cm-button:active {background-image: linear-gradient(#111, #333);}
+.ͼ3 .cm-button {background-image: linear-gradient(#393939, #111); border: 1px solid #888;}
+.ͼ1 .cm-textfield {vertical-align: middle; color: inherit; font-size: 70%; border: 1px solid silver; padding: .2em .5em;}
+.ͼ2 .cm-textfield {background-color: white;}
+.ͼ3 .cm-textfield {border: 1px solid #555; background-color: inherit;}
+.ͼ1 .cm-selectionMatch {background-color: #99ff7780;}
+.ͼ1 .cm-searchMatch .cm-selectionMatch {background-color: transparent;}
+.ͼ1 .cm-tooltip.cm-tooltip-autocomplete > ul > li, .ͼ1 .cm-tooltip.cm-tooltip-autocomplete > ul > completion-section {padding: 1px 3px; line-height: 1.2;}
+.ͼ1 .cm-tooltip.cm-tooltip-autocomplete > ul > li {overflow-x: hidden; text-overflow: ellipsis; cursor: pointer;}
+.ͼ1 .cm-tooltip.cm-tooltip-autocomplete > ul > completion-section {display: list-item; border-bottom: 1px solid silver; padding-left: 0.5em; opacity: 0.7;}
+.ͼ1 .cm-tooltip.cm-tooltip-autocomplete > ul {font-family: monospace; white-space: nowrap; overflow: hidden auto; max-width: 700px; max-width: min(700px, 95vw); min-width: 250px; max-height: 10em; height: 100%; list-style: none; margin: 0; padding: 0;}
+.ͼ2 .cm-tooltip-autocomplete ul li[aria-selected] {background: #17c; color: white;}
+.ͼ2 .cm-tooltip-autocomplete-disabled ul li[aria-selected] {background: #777;}
+.ͼ3 .cm-tooltip-autocomplete ul li[aria-selected] {background: #347; color: white;}
+.ͼ3 .cm-tooltip-autocomplete-disabled ul li[aria-selected] {background: #444;}
+.ͼ1 .cm-completionListIncompleteTop:before, .ͼ1 .cm-completionListIncompleteBottom:after {content: "···"; opacity: 0.5; display: block; text-align: center;}
+.ͼ1 .cm-tooltip.cm-completionInfo {position: absolute; padding: 3px 9px; width: max-content; max-width: 400px; box-sizing: border-box; white-space: pre-line;}
+.ͼ1 .cm-completionInfo.cm-completionInfo-left {right: 100%;}
+.ͼ1 .cm-completionInfo.cm-completionInfo-right {left: 100%;}
+.ͼ1 .cm-completionInfo.cm-completionInfo-left-narrow {right: 30px;}
+.ͼ1 .cm-completionInfo.cm-completionInfo-right-narrow {left: 30px;}
+.ͼ2 .cm-snippetField {background-color: #00000022;}
+.ͼ3 .cm-snippetField {background-color: #ffffff22;}
+.ͼ1 .cm-snippetFieldPosition {vertical-align: text-top; width: 0; height: 1.15em; display: inline-block; margin: 0 -0.7px -.7em; border-left: 1.4px dotted #888;}
+.ͼ1 .cm-completionMatchedText {text-decoration: underline;}
+.ͼ1 .cm-completionDetail {margin-left: 0.5em; font-style: italic;}
+.ͼ1 .cm-completionIcon {font-size: 90%; width: .8em; display: inline-block; text-align: center; padding-right: .6em; opacity: 0.6; box-sizing: content-box;}
+.ͼ1 .cm-completionIcon-function:after, .ͼ1 .cm-completionIcon-method:after {content: 'ƒ';}
+.ͼ1 .cm-completionIcon-class:after {content: '○';}
+.ͼ1 .cm-completionIcon-interface:after {content: '◌';}
+.ͼ1 .cm-completionIcon-variable:after {content: '𝑥';}
+.ͼ1 .cm-completionIcon-constant:after {content: '𝐶';}
+.ͼ1 .cm-completionIcon-type:after {content: '𝑡';}
+.ͼ1 .cm-completionIcon-enum:after {content: '∪';}
+.ͼ1 .cm-completionIcon-property:after {content: '□';}
+.ͼ1 .cm-completionIcon-keyword:after {content: '🔑︎';}
+.ͼ1 .cm-completionIcon-namespace:after {content: '▢';}
+.ͼ1 .cm-completionIcon-text:after {content: 'abc'; font-size: 50%; vertical-align: middle;}
+.ͼ1 .cm-tooltip {z-index: 500; box-sizing: border-box;}
+.ͼ2 .cm-tooltip {border: 1px solid #bbb; background-color: #f5f5f5;}
+.ͼ2 .cm-tooltip-section:not(:first-child) {border-top: 1px solid #bbb;}
+.ͼ3 .cm-tooltip {background-color: #333338; color: white;}
+.ͼ1 .cm-tooltip-arrow:before, .ͼ1 .cm-tooltip-arrow:after {content: ''; position: absolute; width: 0; height: 0; border-left: 7px solid transparent; border-right: 7px solid transparent;}
+.ͼ1 .cm-tooltip-above .cm-tooltip-arrow:before {border-top: 7px solid #bbb;}
+.ͼ1 .cm-tooltip-above .cm-tooltip-arrow:after {border-top: 7px solid #f5f5f5; bottom: 1px;}
+.ͼ1 .cm-tooltip-above .cm-tooltip-arrow {bottom: -7px;}
+.ͼ1 .cm-tooltip-below .cm-tooltip-arrow:before {border-bottom: 7px solid #bbb;}
+.ͼ1 .cm-tooltip-below .cm-tooltip-arrow:after {border-bottom: 7px solid #f5f5f5; top: 1px;}
+.ͼ1 .cm-tooltip-below .cm-tooltip-arrow {top: -7px;}
+.ͼ1 .cm-tooltip-arrow {height: 7px; width: 14px; position: absolute; z-index: -1; overflow: hidden;}
+.ͼ3 .cm-tooltip .cm-tooltip-arrow:before {border-top-color: #333338; border-bottom-color: #333338;}
+.ͼ3 .cm-tooltip .cm-tooltip-arrow:after {border-top-color: transparent; border-bottom-color: transparent;}
+.ͼ1.cm-focused .cm-matchingBracket {background-color: #328c8252;}
+.ͼ1.cm-focused .cm-nonmatchingBracket {background-color: #bb555544;}
+.ͼ1 .cm-foldPlaceholder {background-color: #eee; border: 1px solid #ddd; color: #888; border-radius: .2em; margin: 0 1px; padding: 0 1px; cursor: pointer;}
+.ͼ1 .cm-foldGutter span {padding: 0 1px; cursor: pointer;}
+.ͼ3l {color: #6272a4;}
+.ͼ3m {color: #f1fa8c;}
+.ͼ3n {color: #bd93f9;}
+.ͼ3o {color: #ff79c6;}
+.ͼ3p {color: #8be9fd;}
+.ͼ3q {color: #f8f8f2;}
+.ͼ3r {color: #50fa7b;}
+.ͼ3k {background-color: #2d2f3f; color: #f8f8f2;}
+.ͼ3k .cm-content {caret-color: #f8f8f0;}
+.ͼ3k .cm-cursor, .ͼ3k .cm-dropCursor {border-left-color: #f8f8f0;}
+.ͼ3k.cm-focused .cm-selectionBackgroundm .cm-selectionBackground, .ͼ3k .cm-content ::selection {background-color: #44475a;}
+.ͼ3k .cm-activeLine {background-color: #44475a;}
+.ͼ3k .cm-gutters {background-color: #282a36; color: rgb(144, 145, 148);}
+.ͼ3k .cm-activeLineGutter {background-color: #44475a;}
+.ͼ5u {font-size: 14px;}
+.ͼ5u .cm-scroller {z-index: 10;}
+.ͼ5u .cm-lineNumbers .cm-gutterElement {padding-left: 13px;}
+.ͼ5 {color: #404740;}
+.ͼ6 {text-decoration: underline;}
+.ͼ7 {text-decoration: underline; font-weight: bold;}
+.ͼ8 {font-style: italic;}
+.ͼ9 {font-weight: bold;}
+.ͼa {text-decoration: line-through;}
+.ͼb {color: #708;}
+.ͼc {color: #219;}
+.ͼd {color: #164;}
+.ͼe {color: #a11;}
+.ͼf {color: #e40;}
+.ͼg {color: #00f;}
+.ͼh {color: #30a;}
+.ͼi {color: #085;}
+.ͼj {color: #167;}
+.ͼk {color: #256;}
+.ͼl {color: #00c;}
+.ͼm {color: #940;}
+.ͼn {color: #f00;}
+.ͼ4 .cm-line ::selection, .ͼ4 .cm-line::selection {background-color: transparent !important;}
+.ͼ4 .cm-line {caret-color: transparent !important;}
+.ͼ4 .cm-content :focus::selection, .ͼ4 .cm-content :focus ::selection {background-color: Highlight !important;}
+.ͼ4 .cm-content :focus {caret-color: initial !important;}
+.ͼ4 .cm-content {caret-color: transparent !important;}
+</style>
+		<meta charset="utf-8">
+		<link rel="icon" type="image/png" sizes="512x512" href="https://z-cdn.chatglm.cn/z-ai/static/logo.svg">
+		<link rel="shortcut icon" href="https://z-cdn.chatglm.cn/z-ai/static/logo.svg">
+		<link rel="apple-touch-icon" sizes="512x512" href="https://chat.z.ai/Chat%20with%20Z.ai%20-%20Free%20AI%20Chatbot%20powered%20by%20GLM-4.5">
+		<meta name="apple-mobile-web-app-title" content="Chat with Z.ai - Free AI Chatbot powered by GLM-4.5">
+		<meta name="description" content="Start a free chat with your AI expert for code and smart tools. Tell Z.ai what you need—a complete full-stack application, a stunning presentation, or professional-grade writing—and get instant results.">
+		<meta name="keywords" content="AI chat, chatbot, z.ai chat, free ai chat, free ai chat no login, GLM-4.5, GLM-4.5 chat, GLM-4.1V, GLM-4.5V, AI assistant chat, AI PPT, AI presentation maker, AI slide maker, slide deck, pitch deck, AI deck generator, free pitch deck generator, AI writer, AI writing assistant, AI code generator, full stack code generation, AI full stack developer, claudecode, code writer ai, magic design, magic design tool, AI inspiration board, visual brainstorming AI, chat with AI, AI对话, AI聊天, 聊天机器人, 免费AI聊天, AI做PPT, AI融资PPT, AI写融资方案, AI写作, AI写代码, 全栈开发, 灵感画板, z.ai, zai, free AI, AI tool, AI helper, AI for students, AI for marketers, AI for content creation, ChatGPT, chat gpt free, gpt chat, Claude chat, Poe AI, YouChat, Jasper AI, deepseek, qwen, 豆包, 文心一言, AI搜问答, 写作灵感AI, 代码解释工具, PPT思路生成, 如何用AI做PPT, 哪个AI写作工具免费, AI可以写代码吗, create pitch deck from brief, AI business plan presentation, marketing report slides, AI academic paper assistant, AI legal contract drafting, write social media calendar, AI email responder, debug javascript with AI, refactor python code, generate SQL query from text, build landing page with AI, mood board creator AI, AI storyboard generator, visual brainstorming tool, mind map AI, how to fix writer's block, my code has a bug help, presentation ideas for marketing, I need a business idea, stuck on coding problem, AI for Google Slides, AI for PowerPoint, VS Code AI assistant, AI for Notion, AI for Figma, 根据会议纪要生成PPT, AI写论文初稿, AI写合同草稿, AI生成社交媒体文案, AI前端代码生成, AI重构代码, AI生成故事板, AI思维导图, 我没有写作灵感怎么办, 代码bug在线解决, Figma插件AI, AI math problem solver from image, AI geoguessr solver, image to code generator, table extractor from image, chart data extractor, document analysis AI, image caption generator, visual Q&amp;A, aI VLM chat, aI vision chat, 看图猜成语, AI拍照解题, 数学题解答, 物理题解答, GeoGuess AI, 图片转表格, 图片读数据, 看图问答, VLM聊天,analyze video, summarize video content, generate video transcript, find object in image, what is in this picture, 视频分析, 视频内容摘要, 生成视频字幕, 图片里有什么, 识别图中物体">
+		
+		<link rel="manifest" href="https://z-cdn.chatglm.cn/z-ai/frontend/static/manifest.json">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+		<meta name="theme-color" content="#141618">
+		<link rel="search" type="application/opensearchdescription+xml" title="Chat with Z.ai - Free AI Chatbot powered by GLM-4.5" href="https://z-cdn.chatglm.cn/z-ai/frontend/static/opensearch.xml">
+		<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Z8QTHYBHP3"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+
+			gtag('config', 'G-Z8QTHYBHP3');
+		</script>
+
+
+		<script>
+					let metrics = {}
+					const observer = new PerformanceObserver((list) => {
+						const entries = list.getEntries();
+
+						entries.forEach((entry) => {
+							// 根据不同的entry类型处理不同的性能指标
+							switch (entry.entryType) {
+								case 'navigation':
+									{
+										const navEntry = entry;
+										metrics = {
+											...metrics,
+											dns: navEntry.domainLookupEnd - navEntry.domainLookupStart,
+											response: navEntry.responseEnd - navEntry.responseStart,
+											dom_parse: navEntry.domInteractive - navEntry.responseEnd,
+											dom_ready:
+												navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+											resource: navEntry.domComplete - navEntry.domContentLoadedEventEnd,
+											first_interactive: navEntry.domInteractive - navEntry.fetchStart,
+											first_byte: navEntry.responseStart - navEntry.domainLookupStart,
+											loaded: navEntry.loadEventEnd - navEntry.fetchStart
+										};
+										sessionStorage.setItem('performance', JSON.stringify(metrics));
+										// 发送性能指标到阿里云日志服务
+									}
+									break;
+
+								case 'paint':
+									if (entry.name === 'first-paint') {
+										metrics = {
+											...metrics,
+											first_paint: entry.startTime,
+										};
+										sessionStorage.setItem('performance', JSON.stringify(metrics));
+									}
+									if (entry.name === 'first-contentful-paint') {
+										metrics = {
+											...metrics,
+											first_contentful_paint: entry.startTime,
+										};
+										sessionStorage.setItem('performance', JSON.stringify(metrics));
+									}
+									break;
+							}
+						});
+					});
+
+					// 观察的性能指标类型
+					observer.observe({
+						entryTypes: ['navigation', 'paint']
+					});
+		</script>
+
+		<script>
+			function resizeIframe(obj) {
+				obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+			}
+		</script>
+
+		<script>
+			// On page load or when changing themes, best to add inline in `head` to avoid FOUC
+			const initTheme = () => {
+				const metaThemeColorTag = document.querySelector('meta[name="theme-color"]');
+				// 取用户浏览器设置的主题
+				const prefersTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+
+				if (!localStorage?.theme) {
+					localStorage.theme = prefersTheme;
+				}
+
+				if (localStorage.theme === 'system') {
+					document.documentElement.classList.add(prefersTheme);
+					metaThemeColorTag.setAttribute('content', prefersTheme === 'light' ? '#F4F6F8' : '#141618');
+				} else if (localStorage.theme === 'light') {
+					document.documentElement.classList.add('light');
+					metaThemeColorTag.setAttribute('content', '#F4F6F8');
+				} else {
+					document.documentElement.classList.add('dark');
+					metaThemeColorTag.setAttribute('content', '#141618');
+				}
+
+				window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
+					if (localStorage.theme === 'system') {
+						if (e.matches) {
+							document.documentElement.classList.add('dark');
+							document.documentElement.classList.remove('light');
+							metaThemeColorTag.setAttribute('content', '#141618');
+						} else {
+							document.documentElement.classList.add('light');
+							document.documentElement.classList.remove('dark');
+							metaThemeColorTag.setAttribute('content', '#F4F6F8');
+						}
+					}
+				});
+
+				function setSplashImage() {
+					const logo = document.getElementById('logo');
+					const isDarkMode = document.documentElement.classList.contains('dark');
+					const splashContainer = document.getElementById('splash-screen');
+
+					if (isDarkMode) {
+						const darkImage = new Image();
+						darkImage.src = 'https://z-cdn.chatglm.cn/z-ai/static/logo.svg';
+						splashContainer.style.backgroundColor = '#141618';
+
+						darkImage.onload = () => {
+							logo.src = 'https://z-cdn.chatglm.cn/z-ai/static/logo.svg';
+							logo.style.filter = ''; // Ensure no inversion is applied if splash-dark.png exists
+						};
+
+						darkImage.onerror = () => {
+							logo.style.filter = 'invert(1)'; // Invert image if splash-dark.png is missing
+						};
+					} else {
+						splashContainer.style.backgroundColor = '#F4F6F8';
+					}
+				}
+
+				// Runs after classes are assigned
+				window.addEventListener('DOMContentLoaded', setSplashImage, { once: true });
+			};
+			initTheme();
+		</script>
+
+		<title>
+		Chat with Z.ai - Free AI Chatbot powered by GLM-4.5
+	</title>
+
+		<script>
+			// 炫酷的控制台介绍 - 根据语言显示
+			(function() {
+				// 检测用户语言偏好
+				const userLang = navigator.language || navigator.userLanguage;
+				const isChinese = userLang.startsWith('zh') || userLang.includes('CN') || userLang.includes('TW') || userLang.includes('HK');
+				
+				// 共同的 ASCII Logo
+				const logoLines = [
+					'%c███████╗     █████╗ ██╗',
+					'%c╚══███╔╝    ██╔══██╗██║',
+					'%c  ███╔╝     ███████║██║',
+					'%c ███╔╝      ██╔══██║██║',
+					'%c███████╗ ██╗██║  ██║██║',
+					'%c╚══════╝ ╚═╝╚═╝  ╚═╝╚═╝'
+				];
+				const logoColors = [
+					'color: #ff6b6b; font-family: monospace; font-size: 12px;',
+					'color: #4ecdc4; font-family: monospace; font-size: 12px;',
+					'color: #45b7d1; font-family: monospace; font-size: 12px;',
+					'color: #f9ca24; font-family: monospace; font-size: 12px;',
+					'color: #ff9ff3; font-family: monospace; font-size: 12px;',
+					'color: #6c5ce7; font-family: monospace; font-size: 12px;'
+				];
+
+				if (isChinese) {
+					// 中文版本
+					console.log('%c🚀 欢迎来到 Z.ai 🚀', 'color: #00d4ff; font-size: 20px; font-weight: bold; text-shadow: 0 0 10px #00d4ff;');
+					logoLines.forEach((line, index) => console.log(line, logoColors[index]));
+					console.log('');
+					console.log('%c✨ 基于开源GLM模型的智能AI助手', 'color: #a29bfe; font-size: 14px; font-weight: bold;');
+					console.log('%c🧠 支持文本生成、推理和深度研究', 'color: #fd79a8; font-size: 12px;');
+					console.log('%c🌍 为中英文用户量身定制', 'color: #00b894; font-size: 12px;');
+					console.log('%c💡 免费开源的ChatGPT替代方案', 'color: #fdcb6e; font-size: 12px;');
+					console.log('');
+					console.log('%c---', 'color: #ddd;');
+					console.log('%c由 ❤️ 和大量 ☕ 驱动', 'color: #e84393; font-size: 11px; font-style: italic;');
+					console.log('');
+					console.log('%c🚀 加入我们！我们正在招聘优秀人才！', 'color: #00b894; font-size: 13px; font-weight: bold;');
+					console.log('%c💼 查看职位: https://zhipu-ai.jobs.feishu.cn/s/stmyTm5lxaU', 'color: #0984e3; font-size: 12px; text-decoration: underline;');
+				} else {
+					// 英文版本
+					console.log('%c🚀 Welcome to Z.ai 🚀', 'color: #00d4ff; font-size: 20px; font-weight: bold; text-shadow: 0 0 10px #00d4ff;');
+					logoLines.forEach((line, index) => console.log(line, logoColors[index]));
+					console.log('');
+					console.log('%c✨ Advanced AI assistant powered by open-source GLM models', 'color: #a29bfe; font-size: 14px; font-weight: bold;');
+					console.log('%c🧠 Supports text generation, reasoning, and deep research', 'color: #fd79a8; font-size: 12px;');
+					console.log('%c🌍 Tailored for both English and Chinese users', 'color: #00b894; font-size: 12px;');
+					console.log('%c💡 Free and open-source ChatGPT alternative', 'color: #fdcb6e; font-size: 12px;');
+					console.log('');
+					console.log('%c---', 'color: #ddd;');
+					console.log('%cPowered by ❤️ and lots of ☕', 'color: #e84393; font-size: 11px; font-style: italic;');
+					console.log('');
+					console.log('%c🚀 Join us! We are hiring talented people!', 'color: #00b894; font-size: 13px; font-weight: bold;');
+					console.log('%c💼 View jobs: https://zhipu-ai.jobs.feishu.cn/s/stmyTm5lxaU', 'color: #0984e3; font-size: 12px; text-decoration: underline;');
+				}
+			})();
+		</script>
+
+		
+		<link rel="modulepreload" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/entry/start.DZsktXCB.js">
+		<link rel="modulepreload" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/LRvTP78p.js">
+		<link rel="modulepreload" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/Bh8qedcD.js">
+		<link rel="modulepreload" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/13q5L4vy.js">
+		<link rel="modulepreload" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/entry/app.DpsCWtw-.js">
+		<link rel="modulepreload" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/C1FmrZbK.js">
+		<link rel="modulepreload" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/23upRNXx.js">
+	<link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/nodes/0.D7wC7NTZ.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/D0QH3NT1.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/5r7C-23m.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/CQvYLrR4.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/C9r_52t_.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/Bp6XtHkE.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/CgU5AtxT.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/dxZihYlE.js"><link rel="stylesheet" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/assets/Toaster.uaUbY3tS.css"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/JA9d-ZqT.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/BLdZsJYb.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/gPIAEqxH.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/BujZ2vPx.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/DQ7yNG62.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/DJ8M3DDV.js"><link rel="stylesheet" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/assets/0.DsiQ2_CP.css"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/nodes/1.CjhgaSdo.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/nodes/2.f1lZQrqZ.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/DtezhhGO.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/D0nOAPqw.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/CAlKyAMZ.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/DPufboVk.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/FwYSDnWp.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/DOoFGiW5.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/Drj5ZVrH.js"><link rel="stylesheet" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/assets/ConfirmDialog.kaSBQ3kP.css"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/B-ZXgICo.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/DMXLx9K2.js"><link rel="stylesheet" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/assets/Switch.CyLKLEmt.css"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/wM0QsfGH.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/DvvtfmBW.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/Cwup6bKU.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/C_1uZW85.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/Cw5wyeK8.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/CemNCvPS.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/DfB1qLur.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/DNa1g6IW.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/By6DQs15.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/C3lulNfO.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/D3u2S_jN.js"><link rel="stylesheet" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/assets/ComboBox.DbY80u99.css"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/Cot8QXmz.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/DmvZVDx-.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/BWhkQIDd.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/BIiznJdf.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/C3hcl6Hq.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/DCpS-NyX.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/CcKOjWbF.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/yDEY6r3_.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/DEUYL1d5.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/BC495t21.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/DFk9-YAf.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/DL1PZGN5.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/2PXHZ4aH.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/BIXIRmH-.js"><link rel="stylesheet" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/assets/2.BhAyWm1G.css"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/nodes/5.CgAqOjew.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/s1hWGfcT.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/Bd739xXV.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/C8TKKCwo.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/DEXm1EED.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/CUAk6HDn.js"><link rel="stylesheet" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/assets/DeployProjectButton.z_X1yUjy.css"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/c6QgivE3.js"><link rel="stylesheet" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/assets/WorkSpace.C7KvruIJ.css"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/Cn5izrzb.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/D_zKEnPO.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/C4er8-I3.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/Donq5TIz.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/DKlPev5x.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/DAjiMxP6.js"><link rel="stylesheet" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/assets/Chat.4MqQw6Xk.css"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/DSUQhKYl.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/Bpr2VMhG.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/DKWl6jLa.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/chunks/BhNd052i.js"></head>
+
+	<body data-sveltekit-preload-data="hover"><script src="https://sdk.rum.aliyuncs.com/v2/browser-sdk.js" crossorigin=""></script>
+				<script>
+			const env = location.hostname === 'chat.z.ai' ? 'prod' : 'pre';
+    !(function(c,b,d,a){c[a]||(c[a]={});c[a]=
+    {
+      pid: 'j2c03hoppk@9a8be198b65ba4b',
+			endpoint: 'https://j2c03hoppk-default-cn.rum.aliyuncs.com',
+      // 设置环境信息，参考值：'prod' | 'gray' | 'pre' | 'daily' | 'local'
+      env: env,
+      // 设置路由模式， 参考值：'history' | 'hash'
+      spaMode: 'history',
+      collectors: {
+        // 页面性能指标监听开关，默认开启
+        perf: true,
+        // WebVitals指标监听开关，默认开启
+        webVitals: true,
+        // Ajax监听开关，默认开启
+        api: true,
+        // 静态资源开关，默认开启
+        staticResource: true,
+        // JS错误监听开关，默认开启
+        jsError: true,
+        // 控制台错误监听开关，默认开启
+        consoleError: false,
+        // 用户行为监听开关，默认开启
+        action: true,
+      },
+      // 链路追踪配置开关，默认关闭
+      tracing: false,
+			parseViewName(url) {
+				const pathname = new URL(url).pathname;
+				if (!pathname) {
+					return '/';
+				}
+				return pathname.replace(/(.*)\/[a-f0-9-]+$/g, '$1');
+			},
+			evaluateApi(options, response) {
+
+				const traceId = response?.headers?.get?.('X-Trace-Id') || 'unknown';
+
+				return {
+					name: options.url.replace(/\/[a-f0-9-]{36}/g, '/**'),
+					properties: {
+						traceId
+					}
+				}
+			}
+    }
+    with(b)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("crossorigin","",src=d)
+})(window, document, "https://sdk.rum.aliyuncs.com/v2/browser-sdk.js", "__rum");
+		</script>
+		<div style="display: contents">
+			<script>
+				{
+					__sveltekit_12rw597 = {
+						base: "",
+						assets: "https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/entry/start.DZsktXCB.js"),
+						import("https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.80/_app/immutable/entry/app.DpsCWtw-.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element);
+					});
+				}
+			</script>
+		      <div class="relative app"><div class="text-gray-700 dark:text-white/80 bg-[#F4F6F8] dark:bg-[#141618] h-screen max-h-[100dvh] overflow-auto flex flex-row justify-end">   <audio id="audioElement" style="display: none;"></audio>  <div class="h-screen max-h-[100dvh] transition-width duration-200 ease-in-out   w-full max-w-full flex flex-col" id="chat-container"> <div id="h8ggD6d8nL" data-pane-group="" data-direction="horizontal" data-pane-group-id="h8ggD6d8nL" class="w-full h-full" style="display: flex; flex-direction: row; height: 100%; overflow: hidden; width: 100%;"><div data-pane="" data-pane-id="YbYWOTmr9m" data-pane-group-id="h8ggD6d8nL" class="flex relative w-full h-full" style="flex: 1 1 0px; overflow: hidden;"> <div class="flex flex-col flex-auto z-10 w-full @container">   <nav class="sticky top-0 z-30 w-full px-5 py-3.5 -mb-8 flex items-center drag-region"><div class="bg-linear-to-b via-50% from-[#F4F6F8] via-[#F4F6F8] to-transparent dark:from-[#141618] dark:via-[#141618] dark:to-transparent pointer-events-none absolute inset-0 -bottom-7 z-[-1]"></div> <div class="flex px-1 pt-0.5 mx-auto w-full max-w-full bg-transparent"><div class="flex gap-2 justify-between items-center w-full max-w-full"><div class="flex gap-1"> <div aria-label="Chat History" class="flex"><div class=" self-start flex flex-none p-1 items-center rounded-xl text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-850 transition"><button id="sidebar-toggle-button" class="flex cursor-pointer" aria-label="Toggle Sidebar"><div class="self-center"><svg class=" size-6 text-black dark:text-white" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" stroke-width="1.5"><path d="M938.666667 512a384 384 0 0 1-384 384 379.306667 379.306667 0 0 1-220.16-69.546667 21.76 21.76 0 0 1-8.96-15.786666 21.333333 21.333333 0 0 1 5.973333-16.64l30.72-31.146667a21.333333 21.333333 0 0 1 26.88-2.56A294.826667 294.826667 0 0 0 554.666667 810.666667a298.666667 298.666667 0 1 0-298.666667-298.666667h100.693333a20.906667 20.906667 0 0 1 15.36 6.4l8.533334 8.533333a21.333333 21.333333 0 0 1 0 30.293334L229.973333 708.266667a21.76 21.76 0 0 1-30.293333 0l-150.613333-151.04a21.333333 21.333333 0 0 1 0-30.293334l8.533333-8.533333a20.906667 20.906667 0 0 1 15.36-6.4H170.666667a384 384 0 0 1 768 0z m-367.786667-213.333333h-32.426667a21.333333 21.333333 0 0 0-21.333333 21.333333v198.826667a22.613333 22.613333 0 0 0 6.4 14.933333l140.373333 140.373333a21.333333 21.333333 0 0 0 30.293334 0l22.613333-22.613333a21.333333 21.333333 0 0 0 0-30.293333l-124.586667-124.586667V320a21.333333 21.333333 0 0 0-21.333333-21.333333z" fill="currentColor"></path></svg></div></button></div></div> <div aria-label="New Chat" class="flex"><button id="new-chat-button" class="navNewChat flex  cursor-pointer rounded-xl p-1 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-850 transition" aria-label="New Chat"><div class="self-center m-auto"><svg class=" text-black dark:text-white size-6" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke="currentColor"><g opacity="0.8"><path d="M21 13V17C21 19.2091 19.2091 21 17 21H7C4.79086 21 3 19.2132 3 17.0041C3 14.0012 3 9.96446 3 6.99654C3 4.7874 4.79083 3 6.99997 3C9.00004 3 11 3 11 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8.58494 12.0343C8.21038 12.4093 8 12.9177 8 13.4477V16H10.5686C11.0992 16 11.608 15.7892 11.9831 15.4139L19.5867 7.80695C20.3674 7.02597 20.3674 5.76012 19.5867 4.97914L19.0235 4.41568C18.2422 3.63401 16.9749 3.63425 16.1939 4.41622L8.58494 12.0343Z" stroke="currentColor" stroke-linejoin="round"></path></g></svg></div></button></div></div> <div class="flex-1 overflow-hidden max-w-full py-0.5 "><div class="flex flex-col items-start w-full"><div class="flex justify-between items-center w-full"><div class="overflow-hidden flex"><div class="mr-1 flex flex-col"><button aria-controls="gOOtn67m43" aria-expanded="false" data-state="closed" id="model-selector-0727-360B-API-button" tabindex="0" data-melt-dropdown-menu-trigger="" data-menu-trigger="" type="button" class="modelSelectorButton relative font-primary cursor-default" aria-label="Select a model" disabled=""><div class="flex text-left px-0.5 outline-hidden bg-transparent truncate  text-black dark:text-white text-lg justify-between font-medium placeholder-gray-400 focus:outline-hidden">GLM-4.5 </div></button> </div>  <button role="button" aria-haspopup="dialog" aria-expanded="true" data-state="open" id="GMJf7WEtKf" data-melt-popover-trigger="" data-popover-trigger="" type="button" class="modelRecommendAnchor"><button hidden="" class="relative"></button></button> </div> </div></div></div> <div class="flex flex-none gap-2 items-center self-start text-black dark:text-white"><button class="flex gap-2 items-center px-2 py-1 rounded-lg transition hover:bg-gray-100 dark:hover:bg-gray-850 disabled:cursor-not-allowed disabled:opacity-50"><svg class="size-4" stroke="currentColor" stroke-width="1.5" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="åˆ†äº«2_share-two 1" opacity="0.8"><path id="Vector" d="M8.66667 2.40397C8.66667 1.79298 9.42013 1.50385 9.82886 1.958L13.843 6.41819C14.3081 6.93497 14.2981 7.7224 13.8199 8.22713L9.8173 12.4521C9.40282 12.8896 8.66667 12.5963 8.66667 11.9936V9.33333C4 9.33333 2 14.3333 2 14.3333C2 8.66667 3.66667 5 8.66667 5V2.40397Z" stroke-linecap="round" stroke-linejoin="round"></path></g></svg> <span class="font-medium">Share Session</span></button>  <div class="flex gap-2"><button class="flex h-8 flex-col items-center justify-center rounded-xl dark:bg-[#484A58] dark:hover:bg-[#5A5C68] button-gradient px-4 py-3 text-sm font-medium text-white hover:opacity-90 md:h-10">Sign in</button></div></div></div></div></nav> <div class="flex overflow-auto z-10 flex-col flex-auto justify-between pb-2.5 w-full max-w-full h-0 scrollbar-hidden" id="messages-container"><div class="flex flex-col w-full h-full"><div class="h-full flex pt-8"><div class="pt-2 w-full"><div class="w-full"> <div class="flex flex-col justify-between px-5 mb-3 w-full max-w-[1000px] mx-auto rounded-lg group"> <div class="flex w-full user-message" id="message-ce3755db-e960-4c62-935b-d91178f81f3e"> <div class="flex-auto w-0 max-w-full"> <div class="chat-user w-full min-w-full markdown-prose"> <div class="relative w-full"> <div class="flex justify-end pb-1"><div class="rounded-xl max-w-[90%] px-3 py-2.25  bg-white dark:bg-[#26282A] "> code for an index.htmk file of MortalSoft/GoldenX-CASINO-SITE.git</div></div> <div class="flex justify-end text-gray-600 dark:text-gray-500"> <div aria-label="Edit" class="flex"><button class="invisible p-1.5 rounded-lg transition group-hover:visible hover:bg-black/5 dark:hover:bg-white/5 dark:hover:text-white hover:text-black edit-user-message-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.3" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125"></path></svg></button></div> <div aria-label="Copy" class="flex"><button class="invisible p-1.5 rounded-lg transition group-hover:visible hover:bg-black/5 dark:hover:bg-white/5 dark:hover:text-white hover:text-black"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18" stroke-width="1.5" stroke="currentColor" class="size-4 dark:hover:text-white hover:text-black"><g id="å¤åˆ¶_copy (6) 1"><path id="Vector" d="M4.875 4.66161V2.92944C4.875 2.34696 5.3472 1.87476 5.92969 1.87476H15.0703C15.6528 1.87476 16.125 2.34696 16.125 2.92944V12.0701C16.125 12.6526 15.6528 13.1248 15.0703 13.1248H13.3186" stroke-linecap="round" stroke-linejoin="round"></path><path id="Vector_2" d="M12.0703 4.87476H2.92969C2.3472 4.87476 1.875 5.34696 1.875 5.92944V15.0701C1.875 15.6526 2.3472 16.1248 2.92969 16.1248H12.0703C12.6528 16.1248 13.125 15.6526 13.125 15.0701V5.92944C13.125 5.34696 12.6528 4.87476 12.0703 4.87476Z" stroke-linejoin="round"></path></g></svg></button></div>  </div></div></div></div></div></div><div class="flex flex-col justify-between px-5 mb-3 w-full max-w-[1000px] mx-auto rounded-lg group"> <div class="flex w-full message-b9c15d9c-087a-4d53-b97a-c4ea7e01458a svelte-1u5gq5j" id="message-b9c15d9c-087a-4d53-b97a-c4ea7e01458a"><div class="flex-auto pl-1 w-0"><div class="flex gap-2 items-center"><img crossorigin="anonymous" src="https://z-cdn.chatglm.cn/z-ai/static/logo.svg" class="size-6 object-contain" alt="profile" draggable="false"> <div class="self-center font-semibold line-clamp-1 flex gap-1 items-center"><div aria-label="GLM-4.5" class="flex"><span class="text-black line-clamp-1 dark:text-white">GLM-4.5</span></div> <div class="self-center text-xs invisible group-hover:visible text-gray-400 font-medium first-letter:capitalize ml-0.5 translate-y-[1px]"><div aria-label="Monday, September 15, 2025 9:15 AM" class="flex"><span class="line-clamp-1">Today at 9:15 AM</span></div></div></div></div> <div> <div class="chat-assistant w-full min-w-full markdown-prose svelte-1u5gq5j"><div> <div class="flex relative flex-col w-full" id="response-content-container"><div><div id="" class="flex flex-col px-4 py-3 bg-white/60 dark:bg-black/10 border-1 border-black/10 dark:border-white/10 rounded-xl my-3 w-full"><div class="transition flex flex-1 justify-between items-center gap-2 cursor-pointer "><div class="flex overflow-hidden flex-1 gap-2 text-xs"><div class="flex justify-center items-center size-4 shrink-0"><div class="rounded-full size-1 bg-black/50 dark:bg-white/50"></div></div>  <div class="max-w-full text-xs truncate text-black/30 dark:text-white/30">The user is asking for code for an index.html file for a casino website called "GoldenX Casino" from a Git repository called "MortalSoft/GoldenX-CASINO-SITE.git".</div></div> <div class="flex gap-2 items-center self-end px-2"><div class="flex gap-1 text-xs font-medium whitespace-nowrap item-center text-black/50 dark:text-white/50"></div> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="size-3"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path></svg></div></div> <div class="overflow-hidden relative"><div class="headShadow absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-[#FBFCFDAC] dark:from-[#111415BC] to-transparent pointer-events-none z-1 transition-opacity duration-200 opacity-100"></div> <div class="detailsSubContainer relative transition-all h-0 overflow-hidden max-h-40"><div class="mb-1.5" slot="content"><blockquote dir="auto" class="text-xs leading-5 text-black/50 dark:text-white/50"><p dir="auto" class="svelte-121hp7c">The user is asking for code for an index.html file for a casino website called "GoldenX Casino" from a Git repository called "MortalSoft/GoldenX-CASINO-SITE.git".  </p><div class="my-2 "></div><p dir="auto" class="svelte-121hp7c">I need to create a professional, modern casino website homepage. Since this is a casino site, I should include: </p><ul dir="auto"><li class="text-start"> A luxurious, golden theme</li><li class="text-start"> Navigation menu</li><li class="text-start"> Hero section with call-to-action</li><li class="text-start"> Featured games section</li><li class="text-start"> Promotions/bonuses section</li><li class="text-start"> About section</li><li class="text-start"> Footer with links and information</li> </ul><div class="my-2 "></div><p dir="auto" class="svelte-121hp7c">I'll use modern design with Tailwind CSS for styling, and make it responsive. I'll also add some interactive elements and animations to make it engaging. </p> </blockquote> </div></div> <div class="tailShadow absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#FBFCFDAC] dark:from-[#111415BC] to-transparent pointer-events-none z-1 transition-opacity duration-200 opacity-100"></div></div></div><p dir="auto" class="svelte-121hp7c">I'll create a stunning index.html file for GoldenX Casino with a luxurious, modern design. Here's the complete code: </p><div class="my-2 "></div><div role="button" tabindex="0" class="autoShowArtifacts inline-flex flex-col min-w-[240px] rounded-xl gap-2 border border-black/10 hover:border-black/40 dark:hover:border-white/40 dark:border-white/20 dark:bg-[#16181A] px-3 py-2 max-w-full cursor-pointer transition select-none mb-3"><div class="flex flex-1 max-w-full items-center gap-25"><div class="flex flex-1 items-center gap-2"><div class="flex shrink-0 items-center justify-center"><svg class="size-4" stroke-width="1.333" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M13.113 2.266a.936.936 0 0 1 .797 1.057l-2.476 17.614a.936.936 0 0 1-1.854-.26l2.476-17.615a.936.936 0 0 1 1.057-.796M6.811 6.744a.936.936 0 0 1 0 1.324l-3.55 3.55 3.55 3.551a.936.936 0 1 1-1.324 1.324l-4.213-4.212a.936.936 0 0 1 0-1.325l4.213-4.212a.936.936 0 0 1 1.324 0m15.447 4.213c.357.356.365.93.025 1.297a6.05 6.05 0 0 0-2.377-1.001l-3.185-3.185a.936.936 0 1 1 1.324-1.324zm-3.47 10.491a.48.48 0 0 0 .48-.425c.225-1.341.423-2.03.849-2.457.425-.426 1.11-.624 2.445-.849a.485.485 0 0 0 .438-.48.48.48 0 0 0-.44-.48c-1.332-.227-2.018-.425-2.443-.851-.426-.427-.624-1.115-.849-2.455a.48.48 0 0 0-.48-.428.49.49 0 0 0-.481.426c-.226 1.341-.423 2.03-.85 2.457-.424.426-1.108.624-2.44.85a.48.48 0 0 0-.442.481c0 .26.199.448.439.48 1.335.225 2.02.418 2.444.842.426.425.623 1.114.849 2.466.04.24.23.423.482.423" clip-rule="evenodd"></path></svg></div> <div class="flex flex-col shrink truncate"><span class="font-semibold text-sm">HTML</span> </div></div> <div class="shrink-0"></div></div> <div class="bg-black/10 dark:bg-gray-700 shrink-0 h-[1px] w-full" role="separator" aria-orientation="horizontal"></div> <div class="flex items-center gap-2 px-1 text-black/50 text-xs dark:text-white/30"><svg class="size-3 text-black/30 dark:text-white/30" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1.25c5.937 0 10.75 4.813 10.75 10.75S17.937 22.75 12 22.75 1.25 17.937 1.25 12 6.063 1.25 12 1.25m0 2a8.75 8.75 0 1 0 0 17.5 8.75 8.75 0 0 0 0-17.5m0 3.25a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11"></path></svg> <span>Generate index.html</span></div></div> <div class="my-2 "></div><p dir="auto" class="svelte-121hp7c">This index.html file creates a stunning, professional casino website with: </p><div class="my-2 "></div><ol start="1" dir="auto"><li class="text-start"> <strong>Modern Design</strong>: Uses Tailwind CSS for responsive, modern styling with a luxurious gold theme</li><li class="text-start"> <strong>Interactive Elements</strong>: <ul dir="auto"><li class="text-start"> Animated jackpot counter that increases every 3 seconds</li><li class="text-start"> Hover effects on cards and buttons</li><li class="text-start"> Smooth scrolling navigation</li><li class="text-start"> Mobile-responsive menu</li> </ul></li><li class="text-start"> <strong>Key Sections</strong>:<ul dir="auto"><li class="text-start"> Hero section with animated jackpot display</li><li class="text-start"> Featured games grid with hover effects</li><li class="text-start"> Promotions section with bonus offers</li><li class="text-start"> VIP club section highlighting exclusive benefits</li><li class="text-start"> About section with statistics and trust indicators</li> </ul></li><li class="text-start"> <strong>Animations</strong>: <ul dir="auto"><li class="text-start"> Floating arrow on hero section</li><li class="text-start"> Shimmer effects</li><li class="text-start"> Pulse animations on CTA buttons</li><li class="text-start"> Scroll-triggered fade-in animations</li> </ul></li><li class="text-start"> <strong>Professional Features</strong>:<ul dir="auto"><li class="text-start"> Sticky navigation with blur effect</li><li class="text-start"> Gradient backgrounds and gold accents</li><li class="text-start"> Font Awesome icons throughout</li><li class="text-start"> Responsive grid layouts</li><li class="text-start"> Social media links in footer</li> </ul></li> </ol><div class="my-2 "></div><p dir="auto" class="svelte-121hp7c">The design conveys luxury and excitement while maintaining a professional appearance suitable for a premium online casino. </p></div>   </div></div></div> <div class="flex overflow-x-auto justify-start mt-0.5 text-gray-600 buttons dark:text-gray-500 svelte-1u5gq5j"> <div aria-label="Copy" class="flex"><button class="visible p-1.5 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg dark:hover:text-white hover:text-black transition copy-response-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18" stroke-width="1.5" stroke="currentColor" class="size-4 dark:hover:text-white hover:text-black"><g id="å¤åˆ¶_copy (6) 1"><path id="Vector" d="M4.875 4.66161V2.92944C4.875 2.34696 5.3472 1.87476 5.92969 1.87476H15.0703C15.6528 1.87476 16.125 2.34696 16.125 2.92944V12.0701C16.125 12.6526 15.6528 13.1248 15.0703 13.1248H13.3186" stroke-linecap="round" stroke-linejoin="round"></path><path id="Vector_2" d="M12.0703 4.87476H2.92969C2.3472 4.87476 1.875 5.34696 1.875 5.92944V15.0701C1.875 15.6526 2.3472 16.1248 2.92969 16.1248H12.0703C12.6528 16.1248 13.125 15.6526 13.125 15.0701V5.92944C13.125 5.34696 12.6528 4.87476 12.0703 4.87476Z" stroke-linejoin="round"></path></g></svg></button></div>   <div aria-label="Regenerate" class="flex"><button type="button" class="visible p-1.5 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg dark:hover:text-white hover:text-black transition regenerate-response-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"></path></svg></button></div>  </div></div></div></div></div></div> <div class="pb-12"></div> </div></div></div></div> <div class="px-3 pb-3"> <div class="w-full messageInputContainer font-primary"><div class="flex inset-x-0 justify-center mx-auto bg-transparent"><div class="flex flex-col px-3 max-w-6xl w-full"><div class="relative"></div></div></div> <div class="transparent"><div class="max-w-[960px] bg-transparent mx-auto inset-x-0"><div class=""><input type="file" hidden="" multiple="" accept=".pdf,.docx,.doc,.xls,.xlsx,.ppt,.pptx,.png,.jpg,.jpeg,.csv,.py,.txt,.md,.bmp,.gif"> <form class="flex gap-1.5 w-full"><div class="flex-1 flex flex-col relative w-full rounded-xl border-b-2 border-black/20 dark:border-white/10 transition bg-white/90 dark:bg-[#26282A] dark:text-gray-100" dir="auto"> <div class="overflow-hidden relative px-2.5"><div class="absolute py-2 select-none flagsContainer z-1" style="transform: translateY(0px);"></div> <textarea id="chat-input" dir="auto" rows="3" class="px-1 pt-3 w-full text-sm bg-transparent resize-none scrollbar-hidden dark:text-gray-100 outline-hidden dark:placeholder:text-white/40" placeholder="Send a Message" style="text-indent: 0px; height: 72px;"></textarea></div> <div class="flex justify-between items-center mx-3.5 mt-1.5 mb-3.5 max-w-full" dir="ltr"><div class="self-end flex items-center flex-1 max-w-[80%] gap-1.5"><div aria-label="Upload Files" class="flex"><div role="button" tabindex="0"><button class="border rounded-lg border-black/10 dark:border-white/10 bg-transparent transition p-1.5 outline-hidden focus:outline-hidden hover:bg-gray-100 text-gray-800 dark:text-white dark:hover:bg-gray-800" type="button" aria-label="More"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5"><path d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z"></path></svg></button></div></div>  <div class="flex gap-[8px] items-center overflow-x-auto scrollbar-none flex-1"> <button role="button" aria-haspopup="dialog" aria-expanded="true" data-state="open" id="9tbS_NK3Da" data-melt-popover-trigger="" data-popover-trigger="" type="button"><div class="" aria-expanded="false"><button type="button" class="px-2 @xl:px-3 py-1.5 flex gap-1.5 items-center text-sm rounded-lg border transition-colors duration-300 focus:outline-hidden max-w-full overflow-hidden bg-transparent dark:text-gray-300 border-[#E5E5E5] dark:border-[#3C3E3F] hover:bg-black/5 dark:hover:bg-white/5"><svg class=" size-4" stroke-width="2" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="æ±‰å&nbsp;¡å›¾æ&nbsp;‡_hamburger-button (4) 1"><path id="Vector" d="M2.6499 4.48322H13.3166" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path><path id="Vector_2" d="M2.6499 8.48322H13.3166" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path><path id="Vector_3" d="M2.6499 12.4832H13.3166" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path></g></svg> <span class="hidden @sm:block whitespace-nowrap overflow-hidden text-ellipsis translate-y-[0.5px] mr-0.5"> Tools</span></button></div></button>  <div aria-label="The current scenario cannot be cancelled" class="flex"><button disabled="" data-autothink="true" class="flex gap-1.5 items-center px-2.5 py-1.5 text-sm rounded-lg border border-black/10 dark:border-white/10 data-[autoThink=true]:bg-[#DAEEFF] data-[autoThink=false]:hover:bg-black/5 data-[autoThink=false]:dark:hover:bg-white/5 bg-transparent transition-all disabled:cursor-not-allowed disabled:text-gray-500 dark:text-white/80 data-[autoThink=true]:dark:bg-white/10 data-[autoThink=true]:border-[#0068E00A] data-[autoThink=true]:dark:border-white/10 data-[autoThink=true]:dark:text-white"><svg class="size-4" stroke-width="1.5" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="åœ°çƒä»ª_earth 2" opacity="0.8"><path id="Union" d="M2.08147 2.66759C3.39178 1.1939 5.62652 1.00408 7.16643 2.23595L7.43792 2.45275L7.53851 2.55236C7.74657 2.80259 7.75853 3.17308 7.54729 3.43712C7.33612 3.70107 6.97181 3.77153 6.68206 3.62365L6.56292 3.5465L6.29143 3.3297C5.33311 2.5631 3.9427 2.68102 3.12737 3.59826C2.25007 4.58541 2.37929 6.10624 3.41058 6.93126L5.93792 8.95275L6.03851 9.05236C6.24657 9.30259 6.25853 9.67308 6.04729 9.93712C5.83612 10.2011 5.47181 10.2715 5.18206 10.1236L5.06292 10.0465L2.53558 8.02404C0.878471 6.69807 0.671455 4.25386 2.08147 2.66759ZM8.00042 7.49962C8.55249 7.49988 9.00042 7.9475 9.00042 8.49962C9.0002 9.05156 8.55235 9.49937 8.00042 9.49962C7.44827 9.49962 7.00064 9.05172 7.00042 8.49962C7.00042 7.94734 7.44813 7.49962 8.00042 7.49962Z" fill="currentColor"></path><path id="Vector 2665" d="M7 6L9.02186 3.47268C10.0973 2.12831 12.08 1.95997 13.3667 3.10376V3.10376C14.5624 4.16657 14.7163 5.97958 13.717 7.22878L13.5 7.5" stroke="currentColor" stroke-linecap="round"></path><path id="Vector 2664" d="M10.5 7.5L13.0273 9.52186C14.3717 10.5973 14.54 12.58 13.3962 13.8667V13.8667C12.3334 15.0624 10.5204 15.2163 9.27122 14.217L9 14" stroke="currentColor" stroke-linecap="round"></path><path id="Vector 2666" d="M9 11L6.97814 13.5273C5.90265 14.8717 3.92003 15.04 2.63327 13.8962V13.8962C1.43761 12.8334 1.28367 11.0204 2.28302 9.77122L2.5 9.5" stroke="currentColor" stroke-linecap="round"></path></g></svg> <span>Auto Think</span></button></div></div></div> <div class="flex self-end space-x-1 shrink-0"><div class="flex items-center"><div aria-label="Send message" class="flex"><button id="send-message-button" class="sendMessageButton text-white bg-gray-200 dark:text-white/40 dark:bg-gray-700 disabled transition rounded-lg p-2 self-center" type="submit" disabled=""><svg class="size-4" stroke-width="1.5" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="å‘é€1_send-one 1" clip-path="url(#clip0_1243_3321)"><path id="Vector" d="M7.99946 1.50005L2.29635 13.5283L7.82816 9.72781L13.4678 13.5283L7.99946 1.50005Z" stroke="currentColor" stroke-linejoin="round"></path></g><defs><clipPath id="clip0_1243_3321"><rect width="16" height="16" fill="currentColor"></rect></clipPath></defs></svg></button></div></div></div></div></div></form></div></div></div></div> <div class="absolute right-0 left-0 bottom-1 text-xs text-center text-gray-500 line-clamp-1"></div></div></div></div> <div class="modal fixed right-0  left-0 bottom-0 bg-black/60 w-full h-screen max-h-[100dvh] flex justify-center z-30 overflow-hidden overscroll-contain"><div class="mt-auto w-full bg-gray-50 dark:bg-gray-900 dark:text-gray-100 max-h-[100dvh] overflow-y-auto scrollbar-hidden rounded-none svelte-fq1rhy"><div class=" h-screen  w-full h-full"><div class="@container w-full h-full relative flex flex-col bg-white dark:bg-[#26282A]"><div class="flex overflow-hidden gap-2 justify-between items-center px-4 py-3 w-full artifactsHeader border-b-1 border-black/10"><div class="flex flex-1 gap-2 items-center shrink-1"><div class="flex z-50 gap-2 items-center font-medium whitespace-nowrap pointer-events-none shrink-1"><svg class="size-5" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" stroke-width="1.5"><path fill="currentColor" d="M64 853.312V170.688q0-35.392 24.96-60.352 25.024-24.96 60.352-24.96h256c12.672 0 24.704 5.568 32.768 15.36l93.888 112.64h342.72q35.328 0 60.288 24.96 25.024 24.96 25.024 60.352v554.624q0 35.392-24.96 60.352-25.024 24.96-60.352 24.96H149.312q-35.328 0-60.288-24.96Q64 888.704 64 853.312z m810.688 0V298.688H512a42.688 42.688 0 0 1-32.768-15.36L385.28 170.688H149.312v682.624h725.376z"></path><path fill="currentColor" d="M268.48 652.48L345.024 576 268.48 499.52a42.688 42.688 0 1 1 60.352-60.352l106.688 106.688a42.688 42.688 0 0 1 0 60.288l-106.688 106.688a42.688 42.688 0 1 1-60.352-60.352zM554.688 725.312h170.624a42.688 42.688 0 1 0 0-85.312H554.688a42.688 42.688 0 0 0 0 85.312z"></path></svg> <span>File</span></div></div> <div class="flex z-50 flex-1 gap-2 justify-end items-center shrink-1"><button aria-controls="xVIi8L7fhl" aria-expanded="false" data-state="closed" id="ngWsaW33xw" tabindex="0" data-melt-dropdown-menu-trigger="" data-menu-trigger="" type="button" class="flex justify-center items-center"><button><button class="flex items-center gap-1 text-sm text-white whitespace-nowrap py-2 px-3 rounded-lg font-medium button-gradient dark:bg-[#484A58] svelte-56cskk"><svg width="16" height="16" viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg" class="size-4 inline" stroke-width="1.33333"><g><path d="M11.6667 5.33333C12.5871 5.33333 13.3333 4.58713 13.3333 3.66667C13.3333 2.74619 12.5871 2 11.6667 2C10.7462 2 10 2.74619 10 3.66667C10 4.58713 10.7462 5.33333 11.6667 5.33333Z" stroke="currentColor" stroke-linejoin="round"></path><path d="M4.3339 9.66683C5.25437 9.66683 6.00057 8.92063 6.00057 8.00016C6.00057 7.0797 5.25437 6.3335 4.3339 6.3335C3.41344 6.3335 2.66724 7.0797 2.66724 8.00016C2.66724 8.92063 3.41344 9.66683 4.3339 9.66683Z" stroke="currentColor" stroke-linejoin="round"></path><path d="M10 4.5249L5.77966 7.08187" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5.7793 8.85449L10.2261 11.4822" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11.6667 10.6665C12.5871 10.6665 13.3333 11.4127 13.3333 12.3332C13.3333 13.2536 12.5871 13.9998 11.6667 13.9998C10.7462 13.9998 10 13.2536 10 12.3332C10 11.4127 10.7462 10.6665 11.6667 10.6665Z" stroke="currentColor" stroke-linejoin="round"></path></g></svg> <span>Share</span></button></button></button>  <div aria-label="Edit" class="flex"><button class="p-1.5 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 "><svg class="size-5" stroke-width="2" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M656 135.338667l230.912 230.954666-430.165333 430.122667h428.842666v85.333333H140.544v-230.912L656 135.338667z m-134.826667 255.402666l-295.338666 295.424v110.250667h110.250666l295.381334-295.381333-110.250667-110.293334z m134.826667-134.698666L581.546667 330.410667l110.250666 110.250666 74.453334-74.368L656 256z" fill="currentColor"></path></svg></button></div> <div aria-label="Open Website" class="flex"><button class="p-1.5 rounded-lg hover:bg-black/5 dark:hover:bg-white/5"><svg class="size-5" stroke-width="2" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M664.896 359.104a35.2 35.2 0 0 1 8.512 36.032l-64 192a35.2 35.2 0 0 1-22.272 22.272l-192 64a35.2 35.2 0 0 1-44.544-44.544l64-192a35.2 35.2 0 0 1 22.272-22.272l192-64a35.2 35.2 0 0 1 36.032 8.512zM475.84 475.84L439.68 584.32l108.48-36.16 36.16-108.48-108.48 36.16z" fill="currentColor"></path><path d="M512 819.2a307.2 307.2 0 1 0 0-614.4 307.2 307.2 0 0 0 0 614.4zM896 512A384 384 0 1 1 128 512a384 384 0 0 1 768 0z" fill="currentColor"></path></svg></button></div>  <div class="bg-black/10 dark:bg-gray-700 min-h-4 w-[1px] shrink-0 h-6" role="separator" aria-orientation="vertical"></div> <button class="self-center p-1 bg-white rounded pointer-events-auto dark:bg-gray-850 hover:bg-black/5 dark:hover:bg-white/5"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-5 text-gray-900 dark:text-white"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path></svg></button></div></div> <div class="overflow-hidden relative flex-1"> <div class="flex-1 w-full h-full artifactsContainer svelte-1ddqz9p"><div class="flex relative h-full"><div class="flex absolute top-0 left-0 px-4 py-3 artifactsActions z-11 svelte-1ddqz9p"><div class=""><div data-orientation="horizontal" data-melt-tabs="" data-tabs-root="" class="rounded-full artifactTabs text-sm border-1 border-black/10 dark:border-white/10"><div role="tablist" aria-orientation="horizontal" data-orientation="horizontal" data-melt-tabs-list="" data-tabs-list="" class="flex gap-1 rounded-full bg-white p-0.5 dark:bg-[#16181A] text-nowrap"><button type="button" role="tab" data-state="active" tabindex="0" data-value="preview" data-orientation="horizontal" data-melt-tabs-trigger="" data-tabs-trigger="" class="tabTrigger flex items-center rounded-full min-w-16 bg-transparent px-4 py-1.5 data-[state=active]:bg-black dark:data-[state=active]:bg-white data-[state=active]:text-white dark:data-[state=active]:text-black font-semibold hover:bg-black/5 dark:hover:bg-white/5 transition text-sm text-black/40 dark:text-white/40"> <span>Preview</span>  </button><button type="button" role="tab" data-state="inactive" tabindex="-1" data-value="code" data-orientation="horizontal" data-melt-tabs-trigger="" data-tabs-trigger="" class="tabTrigger flex items-center rounded-full min-w-16 bg-transparent px-4 py-1.5 data-[state=active]:bg-black dark:data-[state=active]:bg-white data-[state=active]:text-white dark:data-[state=active]:text-black font-semibold hover:bg-black/5 dark:hover:bg-white/5 transition text-sm text-black/40 dark:text-white/40"> <span>Code</span>  </button></div></div></div></div> <div class="flex absolute top-0 right-0 px-4 py-3 artifactsActions z-11 svelte-1ddqz9p"></div> <div class="w-full max-w-full h-full"><iframe title="Content" srcdoc="
+		&lt;!DOCTYPE html&gt;
+		&lt;html lang=&quot;en&quot;&gt;
+			&lt;head&gt;
+				&lt;meta charset=&quot;UTF-8&quot;&gt;
+				&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+				&lt;style&gt;
+					body {
+						background-color: white; /* Ensure the iframe has a white background */
+					}
+				&lt;/style&gt;
+			&lt;/head&gt;
+			&lt;body&gt;
+				&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;GoldenX Casino - Premium Online Gaming Experience&lt;/title&gt;
+    &lt;script src=&quot;https://artifacts-cdn.chatglm.site/https://cdn.tailwindcss.com&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://artifacts-cdn.chatglm.site/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css&quot;&gt;
+    &lt;style&gt;
+        @import url('https://artifacts-cdn.chatglm.site/https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap');
+        
+        :root {
+            --gold-primary: #FFD700;
+            --gold-dark: #B8860B;
+            --gold-light: #FFED4E;
+            --bg-dark: #0a0a0a;
+            --bg-card: #1a1a1a;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        
+        .playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .gold-gradient {
+            background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-dark) 100%);
+        }
+        
+        .gold-text {
+            background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold-primary);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+        }
+        
+        .shimmer {
+            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.3), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 2s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .pulse-gold {
+            animation: pulse-gold 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-gold {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7); }
+            50% { box-shadow: 0 0 0 20px rgba(255, 215, 0, 0); }
+        }
+        
+        .game-card {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .game-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--gold-primary), var(--gold-light), var(--gold-primary));
+            border-radius: 0.5rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+        
+        .game-card:hover::before {
+            opacity: 1;
+        }
+        
+        .navbar-scroll {
+            backdrop-filter: blur(10px);
+            background-color: rgba(10, 10, 10, 0.9);
+        }
+        
+        .jackpot-counter {
+            font-variant-numeric: tabular-nums;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Navigation --&gt;
+    &lt;nav id=&quot;navbar&quot; class=&quot;fixed top-0 w-full z-50 transition-all duration-300 bg-black/80&quot;&gt;
+        &lt;div class=&quot;container mx-auto px-4&quot;&gt;
+            &lt;div class=&quot;flex items-center justify-between h-16&quot;&gt;
+                &lt;div class=&quot;flex items-center space-x-2&quot;&gt;
+                    &lt;i class=&quot;fas fa-crown text-3xl gold-text&quot;&gt;&lt;/i&gt;
+                    &lt;span class=&quot;text-2xl font-bold playfair gold-text&quot;&gt;GoldenX&lt;/span&gt;
+                &lt;/div&gt;
+                
+                &lt;div class=&quot;hidden md:flex items-center space-x-8&quot;&gt;
+                    &lt;a href=&quot;#home&quot; class=&quot;hover:text-yellow-400 transition&quot;&gt;Home&lt;/a&gt;
+                    &lt;a href=&quot;#games&quot; class=&quot;hover:text-yellow-400 transition&quot;&gt;Games&lt;/a&gt;
+                    &lt;a href=&quot;#promotions&quot; class=&quot;hover:text-yellow-400 transition&quot;&gt;Promotions&lt;/a&gt;
+                    &lt;a href=&quot;#vip&quot; class=&quot;hover:text-yellow-400 transition&quot;&gt;VIP Club&lt;/a&gt;
+                    &lt;a href=&quot;#about&quot; class=&quot;hover:text-yellow-400 transition&quot;&gt;About&lt;/a&gt;
+                &lt;/div&gt;
+                
+                &lt;div class=&quot;flex items-center space-x-4&quot;&gt;
+                    &lt;button class=&quot;px-4 py-2 border border-yellow-400 rounded-lg hover:bg-yellow-400 hover:text-black transition&quot;&gt;
+                        Login
+                    &lt;/button&gt;
+                    &lt;button class=&quot;px-6 py-2 gold-gradient text-black font-semibold rounded-lg hover:shadow-lg transition&quot;&gt;
+                        Sign Up
+                    &lt;/button&gt;
+                    &lt;button class=&quot;md:hidden&quot; onclick=&quot;toggleMobileMenu()&quot;&gt;
+                        &lt;i class=&quot;fas fa-bars text-xl&quot;&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;!-- Mobile Menu --&gt;
+        &lt;div id=&quot;mobileMenu&quot; class=&quot;hidden md:hidden bg-black/95 backdrop-blur-sm&quot;&gt;
+            &lt;div class=&quot;px-4 py-4 space-y-3&quot;&gt;
+                &lt;a href=&quot;#home&quot; class=&quot;block hover:text-yellow-400 transition&quot;&gt;Home&lt;/a&gt;
+                &lt;a href=&quot;#games&quot; class=&quot;block hover:text-yellow-400 transition&quot;&gt;Games&lt;/a&gt;
+                &lt;a href=&quot;#promotions&quot; class=&quot;block hover:text-yellow-400 transition&quot;&gt;Promotions&lt;/a&gt;
+                &lt;a href=&quot;#vip&quot; class=&quot;block hover:text-yellow-400 transition&quot;&gt;VIP Club&lt;/a&gt;
+                &lt;a href=&quot;#about&quot; class=&quot;block hover:text-yellow-400 transition&quot;&gt;About&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+    
+    &lt;!-- Hero Section --&gt;
+    &lt;section id=&quot;home&quot; class=&quot;relative min-h-screen flex items-center justify-center overflow-hidden&quot;&gt;
+        &lt;div class=&quot;absolute inset-0 bg-gradient-to-b from-black via-transparent to-black&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute inset-0 opacity-20&quot;&gt;
+            &lt;img src=&quot;https://artifacts-cdn.chatglm.site/https://picsum.photos/seed/casino-bg/1920/1080&quot; alt=&quot;Casino Background&quot; class=&quot;w-full h-full object-cover&quot;&gt;
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;relative z-10 text-center px-4&quot;&gt;
+            &lt;h1 class=&quot;text-5xl md:text-7xl font-bold playfair mb-6&quot;&gt;
+                Welcome to &lt;span class=&quot;gold-text&quot;&gt;GoldenX Casino&lt;/span&gt;
+            &lt;/h1&gt;
+            &lt;p class=&quot;text-xl md:text-2xl mb-8 text-gray-300&quot;&gt;
+                Experience the Ultimate Luxury in Online Gaming
+            &lt;/p&gt;
+            
+            &lt;div class=&quot;mb-12&quot;&gt;
+                &lt;div class=&quot;inline-block bg-black/50 backdrop-blur-sm rounded-lg p-6 border border-yellow-400/30&quot;&gt;
+                    &lt;p class=&quot;text-sm text-gray-400 mb-2&quot;&gt;Current Jackpot&lt;/p&gt;
+                    &lt;div class=&quot;text-4xl md:text-6xl font-bold gold-text jackpot-counter&quot; id=&quot;jackpot&quot;&gt;
+                        $2,847,392.45
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;&gt;
+                &lt;button class=&quot;px-8 py-4 gold-gradient text-black font-bold text-lg rounded-lg hover:shadow-2xl transition pulse-gold&quot;&gt;
+                    &lt;i class=&quot;fas fa-play mr-2&quot;&gt;&lt;/i&gt; Play Now
+                &lt;/button&gt;
+                &lt;button class=&quot;px-8 py-4 border-2 border-yellow-400 text-yellow-400 font-bold text-lg rounded-lg hover:bg-yellow-400 hover:text-black transition&quot;&gt;
+                    &lt;i class=&quot;fas fa-gift mr-2&quot;&gt;&lt;/i&gt; Claim Bonus
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;absolute bottom-10 left-1/2 transform -translate-x-1/2 float-animation&quot;&gt;
+            &lt;i class=&quot;fas fa-chevron-down text-2xl text-yellow-400&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    
+    &lt;!-- Featured Games --&gt;
+    &lt;section id=&quot;games&quot; class=&quot;py-20 bg-gradient-to-b from-black to-gray-900&quot;&gt;
+        &lt;div class=&quot;container mx-auto px-4&quot;&gt;
+            &lt;div class=&quot;text-center mb-12&quot;&gt;
+                &lt;h2 class=&quot;text-4xl md:text-5xl font-bold playfair mb-4&quot;&gt;
+                    Featured &lt;span class=&quot;gold-text&quot;&gt;Games&lt;/span&gt;
+                &lt;/h2&gt;
+                &lt;p class=&quot;text-xl text-gray-400&quot;&gt;Discover our most popular and exciting games&lt;/p&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6&quot;&gt;
+                &lt;!-- Game Card 1 --&gt;
+                &lt;div class=&quot;game-card bg-gray-800 rounded-lg overflow-hidden card-hover cursor-pointer&quot;&gt;
+                    &lt;div class=&quot;relative&quot;&gt;
+                        &lt;img src=&quot;https://artifacts-cdn.chatglm.site/https://picsum.photos/seed/slot1/300/200&quot; alt=&quot;Slot Game&quot; class=&quot;w-full h-48 object-cover&quot;&gt;
+                        &lt;div class=&quot;absolute top-2 right-2 bg-red-600 px-2 py-1 rounded text-sm font-semibold&quot;&gt;
+                            HOT
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;p-4&quot;&gt;
+                        &lt;h3 class=&quot;text-lg font-semibold mb-2&quot;&gt;Golden Fortune&lt;/h3&gt;
+                        &lt;p class=&quot;text-gray-400 text-sm mb-3&quot;&gt;Spin to win massive jackpots&lt;/p&gt;
+                        &lt;div class=&quot;flex items-center justify-between&quot;&gt;
+                            &lt;span class=&quot;text-yellow-400&quot;&gt;&lt;i class=&quot;fas fa-star&quot;&gt;&lt;/i&gt; 4.8&lt;/span&gt;
+                            &lt;button class=&quot;text-yellow-400 hover:text-yellow-300&quot;&gt;
+                                Play Now &lt;i class=&quot;fas fa-arrow-right ml-1&quot;&gt;&lt;/i&gt;
+                            &lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                
+                &lt;!-- Game Card 2 --&gt;
+                &lt;div class=&quot;game-card bg-gray-800 rounded-lg overflow-hidden card-hover cursor-pointer&quot;&gt;
+                    &lt;div class=&quot;relative&quot;&gt;
+                        &lt;img src=&quot;https://artifacts-cdn.chatglm.site/https://picsum.photos/seed/blackjack/300/200&quot; alt=&quot;Blackjack&quot; class=&quot;w-full h-48 object-cover&quot;&gt;
+                        &lt;div class=&quot;absolute top-2 right-2 bg-green-600 px-2 py-1 rounded text-sm font-semibold&quot;&gt;
+                            NEW
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;p-4&quot;&gt;
+                        &lt;h3 class=&quot;text-lg font-semibold mb-2&quot;&gt;VIP Blackjack&lt;/h3&gt;
+                        &lt;p class=&quot;text-gray-400 text-sm mb-3&quot;&gt;Test your skills against the dealer&lt;/p&gt;
+                        &lt;div class=&quot;flex items-center justify-between&quot;&gt;
+                            &lt;span class=&quot;text-yellow-400&quot;&gt;&lt;i class=&quot;fas fa-star&quot;&gt;&lt;/i&gt; 4.9&lt;/span&gt;
+                            &lt;button class=&quot;text-yellow-400 hover:text-yellow-300&quot;&gt;
+                                Play Now &lt;i class=&quot;fas fa-arrow-right ml-1&quot;&gt;&lt;/i&gt;
+                            &lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                
+                &lt;!-- Game Card 3 --&gt;
+                &lt;div class=&quot;game-card bg-gray-800 rounded-lg overflow-hidden card-hover cursor-pointer&quot;&gt;
+                    &lt;div class=&quot;relative&quot;&gt;
+                        &lt;img src=&quot;https://artifacts-cdn.chatglm.site/https://picsum.photos/seed/roulette/300/200&quot; alt=&quot;Roulette&quot; class=&quot;w-full h-48 object-cover&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;p-4&quot;&gt;
+                        &lt;h3 class=&quot;text-lg font-semibold mb-2&quot;&gt;Royal Roulette&lt;/h3&gt;
+                        &lt;p class=&quot;text-gray-400 text-sm mb-3&quot;&gt;Place your bets and watch the wheel spin&lt;/p&gt;
+                        &lt;div class=&quot;flex items-center justify-between&quot;&gt;
+                            &lt;span class=&quot;text-yellow-400&quot;&gt;&lt;i class=&quot;fas fa-star&quot;&gt;&lt;/i&gt; 4.7&lt;/span&gt;
+                            &lt;button class=&quot;text-yellow-400 hover:text-yellow-300&quot;&gt;
+                                Play Now &lt;i class=&quot;fas fa-arrow-right ml-1&quot;&gt;&lt;/i&gt;
+                            &lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                
+                &lt;!-- Game Card 4 --&gt;
+                &lt;div class=&quot;game-card bg-gray-800 rounded-lg overflow-hidden card-hover cursor-pointer&quot;&gt;
+                    &lt;div class=&quot;relative&quot;&gt;
+                        &lt;img src=&quot;https://artifacts-cdn.chatglm.site/https://picsum.photos/seed/poker/300/200&quot; alt=&quot;Poker&quot; class=&quot;w-full h-48 object-cover&quot;&gt;
+                        &lt;div class=&quot;absolute top-2 right-2 bg-purple-600 px-2 py-1 rounded text-sm font-semibold&quot;&gt;
+                            LIVE
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;p-4&quot;&gt;
+                        &lt;h3 class=&quot;text-lg font-semibold mb-2&quot;&gt;Texas Hold'em&lt;/h3&gt;
+                        &lt;p class=&quot;text-gray-400 text-sm mb-3&quot;&gt;Join live poker tournaments&lt;/p&gt;
+                        &lt;div class=&quot;flex items-center justify-between&quot;&gt;
+                            &lt;span class=&quot;text-yellow-400&quot;&gt;&lt;i class=&quot;fas fa-star&quot;&gt;&lt;/i&gt; 4.9&lt;/span&gt;
+                            &lt;button class=&quot;text-yellow-400 hover:text-yellow-300&quot;&gt;
+                                Play Now &lt;i class=&quot;fas fa-arrow-right ml-1&quot;&gt;&lt;/i&gt;
+                            &lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;text-center mt-10&quot;&gt;
+                &lt;button class=&quot;px-8 py-3 border-2 border-yellow-400 text-yellow-400 font-semibold rounded-lg hover:bg-yellow-400 hover:text-black transition&quot;&gt;
+                    View All Games &lt;i class=&quot;fas fa-th-large ml-2&quot;&gt;&lt;/i&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    
+    &lt;!-- Promotions Section --&gt;
+    &lt;section id=&quot;promotions&quot; class=&quot;py-20 bg-black&quot;&gt;
+        &lt;div class=&quot;container mx-auto px-4&quot;&gt;
+            &lt;div class=&quot;text-center mb-12&quot;&gt;
+                &lt;h2 class=&quot;text-4xl md:text-5xl font-bold playfair mb-4&quot;&gt;
+                    Exclusive &lt;span class=&quot;gold-text&quot;&gt;Promotions&lt;/span&gt;
+                &lt;/h2&gt;
+                &lt;p class=&quot;text-xl text-gray-400&quot;&gt;Boost your winnings with our amazing offers&lt;/p&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;&gt;
+                &lt;!-- Promotion 1 --&gt;
+                &lt;div class=&quot;bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 border border-yellow-400/30 card-hover&quot;&gt;
+                    &lt;div class=&quot;text-center mb-4&quot;&gt;
+                        &lt;i class=&quot;fas fa-gift text-5xl gold-text mb-4&quot;&gt;&lt;/i&gt;
+                        &lt;h3 class=&quot;text-2xl font-bold mb-2&quot;&gt;Welcome Bonus&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;text-center mb-4&quot;&gt;
+                        &lt;span class=&quot;text-4xl font-bold gold-text&quot;&gt;500%&lt;/span&gt;
+                        &lt;p class=&quot;text-gray-400&quot;&gt;Up to $5,000&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-gray-300 text-sm mb-4&quot;&gt;New players get an incredible 500% match bonus on their first deposit&lt;/p&gt;
+                    &lt;button class=&quot;w-full py-3 gold-gradient text-black font-semibold rounded-lg hover:shadow-lg transition&quot;&gt;
+                        Claim Bonus
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                
+                &lt;!-- Promotion 2 --&gt;
+                &lt;div class=&quot;bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 border border-yellow-400/30 card-hover&quot;&gt;
+                    &lt;div class=&quot;text-center mb-4&quot;&gt;
+                        &lt;i class=&quot;fas fa-coins text-5xl gold-text mb-4&quot;&gt;&lt;/i&gt;
+                        &lt;h3 class=&quot;text-2xl font-bold mb-2&quot;&gt;Daily Cashback&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;text-center mb-4&quot;&gt;
+                        &lt;span class=&quot;text-4xl font-bold gold-text&quot;&gt;25%&lt;/span&gt;
+                        &lt;p class=&quot;text-gray-400&quot;&gt;Every Day&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-gray-300 text-sm mb-4&quot;&gt;Get 25% cashback on your losses every single day, no strings attached&lt;/p&gt;
+                    &lt;button class=&quot;w-full py-3 gold-gradient text-black font-semibold rounded-lg hover:shadow-lg transition&quot;&gt;
+                        Learn More
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                
+                &lt;!-- Promotion 3 --&gt;
+                &lt;div class=&quot;bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 border border-yellow-400/30 card-hover&quot;&gt;
+                    &lt;div class=&quot;text-center mb-4&quot;&gt;
+                        &lt;i class=&quot;fas fa-trophy text-5xl gold-text mb-4&quot;&gt;&lt;/i&gt;
+                        &lt;h3 class=&quot;text-2xl font-bold mb-2&quot;&gt;VIP Rewards&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;text-center mb-4&quot;&gt;
+                        &lt;span class=&quot;text-4xl font-bold gold-text&quot;&gt;Unlimited&lt;/span&gt;
+                        &lt;p class=&quot;text-gray-400&quot;&gt;Perks &amp;amp; Benefits&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-gray-300 text-sm mb-4&quot;&gt;Join our exclusive VIP club and enjoy unlimited rewards and privileges&lt;/p&gt;
+                    &lt;button class=&quot;w-full py-3 gold-gradient text-black font-semibold rounded-lg hover:shadow-lg transition&quot;&gt;
+                        Join VIP
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    
+    &lt;!-- VIP Club Section --&gt;
+    &lt;section id=&quot;vip&quot; class=&quot;py-20 bg-gradient-to-b from-black to-gray-900&quot;&gt;
+        &lt;div class=&quot;container mx-auto px-4&quot;&gt;
+            &lt;div class=&quot;text-center mb-12&quot;&gt;
+                &lt;h2 class=&quot;text-4xl md:text-5xl font-bold playfair mb-4&quot;&gt;
+                    &lt;span class=&quot;gold-text&quot;&gt;VIP Club&lt;/span&gt;
+                &lt;/h2&gt;
+                &lt;p class=&quot;text-xl text-gray-400&quot;&gt;Experience luxury like never before&lt;/p&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;max-w-4xl mx-auto bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 md:p-12 border border-yellow-400/30&quot;&gt;
+                &lt;div class=&quot;grid grid-cols-1 md:grid-cols-2 gap-8 items-center&quot;&gt;
+                    &lt;div&gt;
+                        &lt;h3 class=&quot;text-3xl font-bold mb-4&quot;&gt;Exclusive VIP Benefits&lt;/h3&gt;
+                        &lt;ul class=&quot;space-y-3&quot;&gt;
+                            &lt;li class=&quot;flex items-center&quot;&gt;
+                                &lt;i class=&quot;fas fa-check-circle text-yellow-400 mr-3&quot;&gt;&lt;/i&gt;
+                                &lt;span&gt;Personal account manager&lt;/span&gt;
+                            &lt;/li&gt;
+                            &lt;li class=&quot;flex items-center&quot;&gt;
+                                &lt;i class=&quot;fas fa-check-circle text-yellow-400 mr-3&quot;&gt;&lt;/i&gt;
+                                &lt;span&gt;Higher withdrawal limits&lt;/span&gt;
+                            &lt;/li&gt;
+                            &lt;li class=&quot;flex items-center&quot;&gt;
+                                &lt;i class=&quot;fas fa-check-circle text-yellow-400 mr-3&quot;&gt;&lt;/i&gt;
+                                &lt;span&gt;Exclusive tournaments&lt;/span&gt;
+                            &lt;/li&gt;
+                            &lt;li class=&quot;flex items-center&quot;&gt;
+                                &lt;i class=&quot;fas fa-check-circle text-yellow-400 mr-3&quot;&gt;&lt;/i&gt;
+                                &lt;span&gt;Luxury gifts &amp;amp; rewards&lt;/span&gt;
+                            &lt;/li&gt;
+                            &lt;li class=&quot;flex items-center&quot;&gt;
+                                &lt;i class=&quot;fas fa-check-circle text-yellow-400 mr-3&quot;&gt;&lt;/i&gt;
+                                &lt;span&gt;Invitation to special events&lt;/span&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;button class=&quot;mt-6 px-8 py-3 gold-gradient text-black font-semibold rounded-lg hover:shadow-lg transition&quot;&gt;
+                            Become VIP
+                        &lt;/button&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;text-center&quot;&gt;
+                        &lt;div class=&quot;inline-block relative&quot;&gt;
+                            &lt;div class=&quot;w-48 h-48 rounded-full gold-gradient opacity-20 absolute inset-0 shimmer&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;relative w-48 h-48 rounded-full border-4 border-yellow-400 flex items-center justify-center&quot;&gt;
+                                &lt;i class=&quot;fas fa-crown text-6xl gold-text&quot;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    
+    &lt;!-- About Section --&gt;
+    &lt;section id=&quot;about&quot; class=&quot;py-20 bg-black&quot;&gt;
+        &lt;div class=&quot;container mx-auto px-4&quot;&gt;
+            &lt;div class=&quot;grid grid-cols-1 lg:grid-cols-2 gap-12 items-center&quot;&gt;
+                &lt;div&gt;
+                    &lt;h2 class=&quot;text-4xl md:text-5xl font-bold playfair mb-6&quot;&gt;
+                        About &lt;span class=&quot;gold-text&quot;&gt;GoldenX Casino&lt;/span&gt;
+                    &lt;/h2&gt;
+                    &lt;p class=&quot;text-lg text-gray-300 mb-6&quot;&gt;
+                        GoldenX Casino is the premier destination for luxury online gaming. Since our establishment, we've been committed to providing an unparalleled gaming experience with the highest standards of security, fairness, and entertainment.
+                    &lt;/p&gt;
+                    &lt;p class=&quot;text-lg text-gray-300 mb-6&quot;&gt;
+                        With thousands of games from top providers, massive jackpots, and exclusive VIP treatment, we ensure every moment spent with us is extraordinary.
+                    &lt;/p&gt;
+                    &lt;div class=&quot;grid grid-cols-3 gap-4 mb-8&quot;&gt;
+                        &lt;div class=&quot;text-center&quot;&gt;
+                            &lt;div class=&quot;text-3xl font-bold gold-text&quot;&gt;5000+&lt;/div&gt;
+                            &lt;div class=&quot;text-gray-400&quot;&gt;Games&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;text-center&quot;&gt;
+                            &lt;div class=&quot;text-3xl font-bold gold-text&quot;&gt;1M+&lt;/div&gt;
+                            &lt;div class=&quot;text-gray-400&quot;&gt;Players&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;text-center&quot;&gt;
+                            &lt;div class=&quot;text-3xl font-bold gold-text&quot;&gt;24/7&lt;/div&gt;
+                            &lt;div class=&quot;text-gray-400&quot;&gt;Support&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;flex flex-wrap gap-4&quot;&gt;
+                        &lt;img src=&quot;https://artifacts-cdn.chatglm.site/https://picsum.photos/seed/license1/100/60&quot; alt=&quot;License&quot; class=&quot;h-12 object-contain&quot;&gt;
+                        &lt;img src=&quot;https://artifacts-cdn.chatglm.site/https://picsum.photos/seed/license2/100/60&quot; alt=&quot;License&quot; class=&quot;h-12 object-contain&quot;&gt;
+                        &lt;img src=&quot;https://artifacts-cdn.chatglm.site/https://picsum.photos/seed/license3/100/60&quot; alt=&quot;License&quot; class=&quot;h-12 object-contain&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;relative&quot;&gt;
+                    &lt;img src=&quot;https://artifacts-cdn.chatglm.site/https://picsum.photos/seed/casino-interior/600/400&quot; alt=&quot;Casino Interior&quot; class=&quot;rounded-lg shadow-2xl&quot;&gt;
+                    &lt;div class=&quot;absolute -bottom-6 -right-6 w-32 h-32 gold-gradient rounded-lg flex items-center justify-center&quot;&gt;
+                        &lt;i class=&quot;fas fa-shield-alt text-4xl text-black&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    
+    &lt;!-- Footer --&gt;
+    &lt;footer class=&quot;bg-gray-900 py-12 border-t border-gray-800&quot;&gt;
+        &lt;div class=&quot;container mx-auto px-4&quot;&gt;
+            &lt;div class=&quot;grid grid-cols-1 md:grid-cols-4 gap-8 mb-8&quot;&gt;
+                &lt;div&gt;
+                    &lt;div class=&quot;flex items-center space-x-2 mb-4&quot;&gt;
+                        &lt;i class=&quot;fas fa-crown text-2xl gold-text&quot;&gt;&lt;/i&gt;
+                        &lt;span class=&quot;text-xl font-bold playfair gold-text&quot;&gt;GoldenX&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-gray-400&quot;&gt;The ultimate luxury online casino experience.&lt;/p&gt;
+                &lt;/div&gt;
+                
+                &lt;div&gt;
+                    &lt;h4 class=&quot;text-lg font-semibold mb-4&quot;&gt;Quick Links&lt;/h4&gt;
+                    &lt;ul class=&quot;space-y-2 text-gray-400&quot;&gt;
+                        &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;hover:text-yellow-400 transition&quot;&gt;Games&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;hover:text-yellow-400 transition&quot;&gt;Promotions&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;hover:text-yellow-400 transition&quot;&gt;VIP Club&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;hover:text-yellow-400 transition&quot;&gt;Mobile App&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+                
+                &lt;div&gt;
+                    &lt;h4 class=&quot;text-lg font-semibold mb-4&quot;&gt;Support&lt;/h4&gt;
+                    &lt;ul class=&quot;space-y-2 text-gray-400&quot;&gt;
+                        &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;hover:text-yellow-400 transition&quot;&gt;Help Center&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;hover:text-yellow-400 transition&quot;&gt;Responsible Gaming&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;hover:text-yellow-400 transition&quot;&gt;FAQ&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;hover:text-yellow-400 transition&quot;&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+                
+                &lt;div&gt;
+                    &lt;h4 class=&quot;text-lg font-semibold mb-4&quot;&gt;Follow Us&lt;/h4&gt;
+                    &lt;div class=&quot;flex space-x-4 mb-4&quot;&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;text-gray-400 hover:text-yellow-400 transition&quot;&gt;
+                            &lt;i class=&quot;fab fa-facebook text-xl&quot;&gt;&lt;/i&gt;
+                        &lt;/a&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;text-gray-400 hover:text-yellow-400 transition&quot;&gt;
+                            &lt;i class=&quot;fab fa-twitter text-xl&quot;&gt;&lt;/i&gt;
+                        &lt;/a&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;text-gray-400 hover:text-yellow-400 transition&quot;&gt;
+                            &lt;i class=&quot;fab fa-instagram text-xl&quot;&gt;&lt;/i&gt;
+                        &lt;/a&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;text-gray-400 hover:text-yellow-400 transition&quot;&gt;
+                            &lt;i class=&quot;fab fa-youtube text-xl&quot;&gt;&lt;/i&gt;
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-gray-400 text-sm&quot;&gt;18+ | Play Responsibly&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;border-t border-gray-800 pt-8 text-center text-gray-400&quot;&gt;
+                &lt;p&gt;© 2024 GoldenX Casino. All rights reserved. | Licensed and Regulated&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+    
+    &lt;script&gt;
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY &gt; 50) {
+                navbar.classList.add('navbar-scroll');
+            } else {
+                navbar.classList.remove('navbar-scroll');
+            }
+        });
+        
+        // Jackpot counter animation
+        function animateJackpot() {
+            const jackpot = document.getElementById('jackpot');
+            const currentValue = parseFloat(jackpot.textContent.replace(/[$,]/g, ''));
+            const increment = Math.random() * 10;
+            const newValue = currentValue + increment;
+            
+            jackpot.textContent = '$' + newValue.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        }
+        
+        setInterval(animateJackpot, 3000);
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^=&quot;#&quot;]').forEach(anchor =&gt; {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('mobileMenu').classList.add('hidden');
+                }
+            });
+        });
+        
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry =&gt; {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section =&gt; {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    &lt;/script&gt;
+
+&lt;/body&gt;&lt;/html&gt;
+			&lt;/body&gt;
+		&lt;/html&gt;
+" class="w-full h-full rounded-none border-0" sandbox="allow-scripts allow-forms allow-same-origin"></iframe></div></div></div></div></div></div></div></div></div> </div>   </div></div>  <div id="svelte-announcer" aria-live="assertive" aria-atomic="true" style="position: absolute; left: 0px; top: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); overflow: hidden; white-space: nowrap; width: 1px; height: 1px;">Chat with Z.ai - Free AI Chatbot powered by GLM-4.5</div></div>
+
+		
+	
+
+
+<style type="text/css" nonce="">
+	html {
+		overflow-y: hidden !important;
+	}
+
+	#splash-screen {
+		background: #F4F6F8;
+	}
+
+	html.dark #splash-screen {
+		background: #141618;
+	}
+
+	#progress-background {
+		display: none;
+	}
+
+	#progress-bar {
+		display: none;
+	}
+
+	html.her #logo {
+		display: none;
+	}
+
+	html.her #progress-background {
+		display: block;
+	}
+
+	html.her #progress-bar {
+		display: block;
+	}
+
+	@media (max-width: 24rem) {
+		html.her #progress-background {
+			display: none;
+		}
+
+		html.her #progress-bar {
+			display: none;
+		}
+	}
+
+	@keyframes pulse {
+		50% {
+			opacity: 0.65;
+		}
+	}
+
+	.animate-pulse-fast {
+		animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+	}
+</style>
+<div class="drawer-portal"><div class="fixed z-9999 bg-white dark:bg-gray-850 shadow-lg transition-transform duration-300 ease-in-out rounded-t-2xl" style="left: auto;right: auto;top: auto;bottom: 0;width: 100vw;height: 73%;transform: translateY(150%)"></div></div></body></html>
